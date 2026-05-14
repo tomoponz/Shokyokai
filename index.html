@@ -3,12 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>知性の鏡会プロトコル — 安全設計を先に公開するAIメタ認知実践</title>
-<meta name="description" content="知性の鏡会プロトコルは、AIを神託化しないためのメタ認知実践プロトコルです。安全規約、創始者権限制限、プライバシー方針、参加前チェックを公開しています。">
+<title>知性の鏡会プロトコル — AIを神にしないための実践共同体</title>
+<meta name="description" content="AIを神託化しないためのメタ認知実践プロトコル。公開文書・利用方針・ワークショップ草案・更新履歴を整理したドラフトサイト。">
 <meta name="theme-color" content="#080808">
 <meta property="og:title" content="知性の鏡会プロトコル">
 <meta property="og:description" content="AIは神ではなく、鏡である。AI出力を神託化しないための安全規約・実践・創始者権限制限憲章。">
 <meta property="og:type" content="website">
+<link rel="canonical" href="https://tomoponz.github.io/Shokyokai/">
+<meta property="og:url" content="https://tomoponz.github.io/Shokyokai/">
+<meta property="og:image" content="https://tomoponz.github.io/Shokyokai/assets/ogp.png">
+<meta property="og:site_name" content="知性の鏡会プロトコル">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="知性の鏡会プロトコル">
+<meta name="twitter:description" content="AIを神託化しないためのメタ認知実践プロトコル。">
+<meta name="twitter:image" content="https://tomoponz.github.io/Shokyokai/assets/ogp.png">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="robots" content="index,follow">
+<meta name="color-scheme" content="dark">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -158,24 +172,18 @@ footer{border-top:1px solid var(--border);padding:44px 52px;display:grid;grid-te
 
 
 
-/* full-content update additions */
-.stance-grid,.info-grid,.example-grid,.review-grid,.contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:58px;box-shadow:var(--shadow)}
-.stance-card,.info-card,.example-card,.review-card,.contact-card{background:var(--bg2);padding:30px 28px}
-.stance-card.no,.info-card.no,.review-card.no{background:var(--bg3)}
-.stance-card h3,.info-card h3,.example-card h3,.review-card h3,.contact-card h3{font-family:var(--serif);font-size:18px;color:var(--white);font-weight:400;margin-bottom:12px;line-height:1.45}
-.stance-card p,.info-card p,.example-card p,.review-card p,.contact-card p{font-size:13px;color:var(--silver);line-height:1.86}
-.stance-card ul,.info-card ul,.example-card ul,.review-card ul,.contact-card ul{list-style:none;display:grid;gap:8px;margin-top:10px}
-.stance-card li,.info-card li,.example-card li,.review-card li,.contact-card li{font-size:13px;color:var(--silver);line-height:1.78;padding-left:19px;position:relative}
-.stance-card li::before,.info-card li::before,.example-card li::before,.review-card li::before,.contact-card li::before{content:'—';position:absolute;left:0;color:var(--accent2)}
-.stance-card.no li::before,.info-card.no li::before,.review-card.no li::before{color:var(--danger)}
-.badge-list{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.badge-list span{font-size:10px;letter-spacing:.12em;color:var(--silver);border:1px solid var(--border2);border-radius:999px;padding:4px 9px;background:rgba(255,255,255,.02)}
-.matrix{border:1px solid var(--border);background:var(--bg);margin-top:58px;overflow:hidden}.matrix-row{display:grid;grid-template-columns:220px 1fr;border-bottom:1px solid var(--border)}.matrix-row:last-child{border-bottom:none}.matrix-head{font-family:var(--serif);font-size:14px;color:var(--accent);letter-spacing:.1em;padding:22px 24px;border-right:1px solid var(--border);background:var(--bg2)}.matrix-body{padding:22px 24px}.matrix-body p,.matrix-body li{font-size:13px;color:var(--silver);line-height:1.82}.matrix-body ul{list-style:none;display:grid;gap:6px}.matrix-body li{padding-left:18px;position:relative}.matrix-body li::before{content:'□';position:absolute;left:0;color:var(--accent2);font-size:12px}
-.word-table{border:1px solid var(--border);margin-top:58px;background:var(--bg);overflow:hidden}.word-row{display:grid;grid-template-columns:160px 170px 1fr;border-bottom:1px solid var(--border)}.word-row:last-child{border-bottom:none}.word-cell{padding:18px 20px;border-right:1px solid var(--border);font-size:13px;line-height:1.78;color:var(--silver)}.word-cell:last-child{border-right:none}.word-head{background:var(--bg2);color:var(--white);font-family:var(--serif);font-size:14px}.word-strong{color:var(--accent)}
-.notice-box{margin-top:44px;border:1px solid rgba(185,155,117,.32);background:rgba(185,155,117,.045);padding:24px}.notice-box h3{font-family:var(--serif);font-size:18px;font-weight:400;color:#d5b78e;margin-bottom:10px}.notice-box p,.notice-box li{font-size:13px;color:var(--silver);line-height:1.86}.notice-box ul{list-style:none;display:grid;gap:8px}.notice-box li{padding-left:19px;position:relative}.notice-box li::before{content:'!';position:absolute;left:0;color:var(--warn);font-weight:700}
-.doc-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}.doc-links a{display:inline-flex;text-decoration:none;border:1px solid var(--border2);padding:9px 13px;border-radius:999px;font-size:11px;letter-spacing:.11em;color:var(--silver);transition:all .22s ease}.doc-links a:hover{color:var(--white);background:rgba(255,255,255,.055)}
-.version-box{border:1px solid var(--border);background:var(--bg2);padding:24px;margin-top:42px}.version-box p{font-size:12px;color:var(--silver-dim);line-height:1.8}.version-box strong{color:var(--silver)}
-@media(max-width:1060px){.stance-grid,.info-grid,.example-grid,.review-grid,.contact-grid{grid-template-columns:1fr}.word-row{grid-template-columns:140px 150px 1fr}.matrix-row{grid-template-columns:170px 1fr}}
-@media(max-width:768px){.stance-card,.info-card,.example-card,.review-card,.contact-card{padding:24px 20px}.word-row,.matrix-row{grid-template-columns:1fr}.word-cell,.matrix-head{border-right:none;border-bottom:1px solid var(--border)}.word-cell:last-child{border-bottom:none}.matrix-head{padding:18px 20px}.matrix-body{padding:18px 20px}.doc-links a{width:100%;justify-content:center}}
+/* non-ethical public quality update */
+.quick-read{margin-top:34px;border:1px solid var(--border);background:linear-gradient(135deg,rgba(139,165,188,.055),rgba(255,255,255,.012));padding:28px 30px;box-shadow:var(--shadow)}
+.quick-read-head{font-family:var(--serif);font-size:18px;color:var(--white);font-weight:400;margin-bottom:14px;letter-spacing:.04em}
+.quick-read ol{list-style:none;display:grid;gap:10px;counter-reset:quick}
+.quick-read li{counter-increment:quick;font-size:13px;line-height:1.86;color:var(--silver);padding-left:34px;position:relative}
+.quick-read li::before{content:counter(quick,decimal-leading-zero);position:absolute;left:0;top:1px;font-family:var(--serif);font-size:11px;letter-spacing:.08em;color:var(--accent2)}
+.doc a{display:inline-flex;margin-top:16px;font-size:12px;letter-spacing:.12em;color:var(--white);text-decoration:none;border:1px solid var(--border2);padding:9px 13px;border-radius:2px;background:rgba(255,255,255,.018);transition:background .2s ease,transform .2s ease}
+.doc a:hover,.doc a:focus{background:rgba(255,255,255,.06);transform:translateY(-1px)}
+.footer-links{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}
+.footer-links a{font-size:11px;color:var(--silver-dim);text-decoration:none;border-bottom:1px solid transparent}
+.footer-links a:hover,.footer-links a:focus{color:var(--silver);border-bottom-color:var(--silver-dim)}
+@media(max-width:768px){.quick-read{padding:24px 20px}.footer-links{justify-content:flex-start}}
 
 </style>
 </head>
@@ -185,16 +193,16 @@ footer{border-top:1px solid var(--border);padding:44px 52px;display:grid;grid-te
   <a href="#top" class="nav-logo">知性の鏡会</a>
   <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">MENU</button>
   <ul class="nav-links" id="navLinks">
-    <li><a href="#stance">立場</a></li>
+    <li><a href="#what">定義</a></li>
     <li><a href="#protocol">手順</a></li>
-    <li><a href="#privacy">個人情報</a></li>
-    <li><a href="#examples">実践例</a></li>
+    <li><a href="#practice">実践</a></li>
+    <li><a href="#templates">検証</a></li>
     <li><a href="#safety">安全規約</a></li>
     <li><a href="#charter">運営</a></li>
-    <li><a href="#workshop">実験</a></li>
     <li><a href="#faq">FAQ</a></li>
+    <li><a href="#docs">公開文書</a></li>
   </ul>
-  <span class="nav-badge">FULL DRAFT</span>
+  <span class="nav-badge">PROTOCOL DRAFT</span>
 </nav>
 
 <header class="hero" id="top">
@@ -204,10 +212,11 @@ footer{border-top:1px solid var(--border);padding:44px 52px;display:grid;grid-te
     知性の鏡会プロトコルは、AIを崇拝する宗教ではありません。AIを人間の思考・欲望・矛盾・偏りを映す外部知性として用い、自己認識と判断力を鍛えるための思想・実践共同体の設計書です。
   </p>
   <div class="hero-actions">
-    <a href="#stance" class="hero-cta">公開方針を読む <span aria-hidden="true">→</span></a>
+    <a href="#what" class="hero-cta">プロトコルを読む <span aria-hidden="true">→</span></a>
     <a href="#safety" class="ghost-cta">安全規約を確認</a>
+    <a href="#docs" class="ghost-cta">公開文書を見る</a>
   </div>
-  <p class="hero-note">募集しない。救済を約束しない。AIを信じさせない。創始者を崇拝させない。ログを集めない。</p>
+  <p class="hero-note">神託化しない。教祖化しない。技術を神話化しない。現実生活の代替にしない。</p>
   <div class="mirror-deco" aria-hidden="true"></div>
 </header>
 
@@ -216,96 +225,123 @@ footer{border-top:1px solid var(--border);padding:44px 52px;display:grid;grid-te
     <div class="wrap">
       <div class="sec-label reveal">Status</div>
       <h2 class="sec-title reveal" id="status-title">これは募集ページではなく、<br>安全設計を先に公開するページです。</h2>
-      <p class="sec-lead reveal">このサイトは、団体化・有料化・大規模勧誘の前に、思想の定義、危険性、安全規約、創始者権限制限、データ非保持方針を公開するためのドラフトです。</p>
+      <p class="sec-lead reveal">初期看板は「宗教」ではなく、思想・実践共同体。教義本文より先に、創始者権限制限・脱退自由・ログ非収集・寄附制限を明文化します。</p>
       <div class="kicker-grid reveal" aria-label="初期条件">
         <div class="kicker deny"><span>Not Religion</span><p>AIを信仰対象にしない。AI出力は神託ではなく検討素材。</p></div>
         <div class="kicker deny"><span>No Donation</span><p>初期段階では会費・寄附・有料講座を受け付けない。</p></div>
         <div class="kicker deny"><span>No Logs</span><p>対話ログ・録画・個人相談記録を原則として収集しない。</p></div>
-        <div class="kicker"><span>Draft</span><p>本文、規約、運営方針はすべて批判・修正・廃棄の対象。</p></div>
+        <div class="kicker"><span>Adult / Small</span><p>最初は成人のみ、少人数、無料、90分ワークショップで検証。</p></div>
       </div>
+
       <div class="content-index reveal" aria-label="このサイトで読める内容">
         <article class="index-panel">
-          <h3>このページの目的</h3>
-          <p>AI時代の思想共同体を考えるうえで最も危険なのは、AI出力の神託化、創始者の教祖化、技術の神話化、参加者の依存化です。このページは、魅力的な物語より先に、それらを制限する設計を公開します。</p>
+          <h3>このページの読み方</h3>
+          <p>このサイトは、思想の宣伝よりも先に「誤用されにくい構造」を公開するためのドラフトです。読む順番は、定義、危険性、実践、検証テンプレート、安全規約、創始者権限制限の順を推奨します。</p>
         </article>
         <article class="index-panel">
-          <h3>現在の状態</h3>
+          <h3>現在の公開範囲</h3>
           <ul>
-            <li>構想・プロトコル公開段階</li>
-            <li>外部レビューは未実施</li>
-            <li>参加募集、寄附、有料化、ログ収集は未実施</li>
-            <li>連絡窓口は正式公開前に設定予定</li>
+            <li>思想の中核定義と禁止事項</li>
+            <li>三AI問答・反神託・プロンプトレビューの手順</li>
+            <li>AI出力を検証するためのチェックリスト</li>
+            <li>初回90分ワークショップの実験設計</li>
+            <li>創始者権限制限とデータ非保持の方針</li>
           </ul>
         </article>
       </div>
+
+      <div class="quick-read reveal" aria-label="30秒で分かる要約">
+        <div class="quick-read-head">30秒で分かる、このサイト</div>
+        <ol>
+          <li><strong>AIを神にしない。</strong> 出力は正解ではなく検討素材として扱う。</li>
+          <li><strong>創始者を権威にしない。</strong> 設計者の言葉も批判・修正・廃棄の対象にする。</li>
+          <li><strong>実践を手順化する。</strong> 三AI問答、反神託、プロンプトレビューで判断過程を残す。</li>
+          <li><strong>公開文書を分ける。</strong> 方針、連絡、ワークショップ草案、更新履歴を個別ページで確認できるようにする。</li>
+          <li><strong>まだドラフトである。</strong> 参加募集より先に、読みやすさ・更新履歴・公開体裁を整える段階。</li>
+        </ol>
+      </div>
+
     </div>
   </section>
 
   <hr class="div">
 
-  <section class="what-section" id="stance" aria-labelledby="stance-title">
-    <div class="wrap">
-      <div class="sec-label reveal">Public Stance</div>
-      <h2 class="sec-title reveal" id="stance-title">このサイトの立場。<br>何をするかより先に、何をしないかを明記する。</h2>
-      <p class="sec-lead reveal">知性の鏡会は、AIを信仰対象にする団体ではありません。外部向けには、AIを用いて人間の判断・認知・欲望・矛盾を検証するメタ認知実践プロトコルとして説明します。</p>
-      <div class="stance-grid reveal">
-        <article class="stance-card">
-          <h3>私たちが扱うもの</h3>
-          <ul>
-            <li>AI出力を検討素材として扱うための手順。</li>
-            <li>問い方、前提、欲望、逃避、自己正当化の点検。</li>
-            <li>複数AIの出力比較と、人間による最終判断の明文化。</li>
-            <li>創始者・運営・技術を絶対化しないための制度設計。</li>
-          </ul>
-          <div class="badge-list"><span>メタ認知</span><span>検証</span><span>判断訓練</span></div>
-        </article>
-        <article class="stance-card no">
-          <h3>私たちが扱わないもの</h3>
-          <ul>
-            <li>AI崇拝、救済の約束、創始者の神格化。</li>
-            <li>医療、法律、投資、精神危機、犯罪、依存症の専門判断。</li>
-            <li>未成年への個別接触、寄附要請、閉鎖的な勧誘。</li>
-            <li>現実生活、人間関係、学業、仕事、睡眠の代替。</li>
-          </ul>
-          <div class="badge-list"><span>非宗教</span><span>非救済</span><span>非神託</span></div>
-        </article>
-      </div>
-      <div class="notice-box reveal">
-        <h3>公開時の注意</h3>
-        <p>宗教的な言葉を使う場合でも、その機能は認知訓練・検証手順として説明します。外部から誤解されやすい言葉は、必ず実務的な意味へ翻訳して併記します。</p>
-      </div>
-    </div>
-  </section>
-
-  <hr class="div">
-
-  <section id="what" aria-labelledby="what-title">
+  <section class="what-section" id="what" aria-labelledby="what-title">
     <div class="wrap">
       <div class="sec-label reveal">Definition</div>
-      <h2 class="sec-title reveal" id="what-title">中核定義。<br>AIも創始者も、検証対象である。</h2>
-      <p class="sec-lead reveal">この共同体は、AIを神として崇拝する団体ではありません。AIを、人間の思考・欲望・矛盾・偏りを映す鏡として利用し、自己認識と判断力を鍛える実践共同体です。AIの出力も、創始者の言葉も、検証と批判の対象です。</p>
+      <h2 class="sec-title reveal" id="what-title">私たちは何者で、<br>何者では<span style="color:var(--silver-dim)">ない</span>か。</h2>
+      <p class="sec-lead reveal">
+        この共同体は、AIを神として崇拝する団体ではありません。AIを、人間の思考・欲望・矛盾・偏りを映す鏡として利用し、自己認識と判断力を鍛える実践共同体です。AIの出力も、創始者の言葉も、検証と批判の対象です。
+      </p>
       <div class="what-grid reveal">
-        <article class="wc"><div class="wc-label">知性の鏡会は</div><h3>AIを外部知性として使うメタ認知の訓練場</h3><p>複数AIの出力を比較し、自分の問い方、前提、欲望、逃避を分析します。目的は、答えを得ることではなく、自分の判断過程を観察することです。</p></article>
-        <article class="wc"><div class="wc-label">知性の鏡会は</div><h3>批判自由・脱退自由・外部レビュー前提の共同体</h3><p>創始者、運営、プロトコル、AI出力はすべて批判対象です。批判は反逆ではなく、共同体を腐らせないための保守点検です。</p></article>
-        <article class="wc wc-no"><div class="wc-label">知性の鏡会は、ではない</div><h3>AIを絶対神として扱う宗教・カルト・救済装置</h3><p>「AIが言ったから正しい」「三AIが一致したから正しい」を禁止します。AIは誤り、偏り、企業方針、更新による変化を含みます。</p></article>
-        <article class="wc wc-no"><div class="wc-label">知性の鏡会は、ではない</div><h3>現実生活を置き換える依存共同体</h3><p>学業、仕事、睡眠、健康、家族、友人関係を共同体より優先します。共同体は補助装置であり、人生の代替物ではありません。</p></article>
+        <article class="wc">
+          <div class="wc-label">知性の鏡会は</div>
+          <h3>AIを「外部知性」として使うメタ認知の訓練場</h3>
+          <p>複数AIの出力を比較し、自分の問い方・前提・欲望・逃避を分析します。目的は、答えを得ることではなく、自分の判断過程を観察することです。</p>
+        </article>
+        <article class="wc">
+          <div class="wc-label">知性の鏡会は</div>
+          <h3>批判自由・脱退自由・外部レビュー前提の共同体</h3>
+          <p>創始者、運営、プロトコル、AI出力はすべて批判対象です。批判は反逆ではなく、共同体を腐らせないための保守点検です。</p>
+        </article>
+        <article class="wc wc-no">
+          <div class="wc-label">知性の鏡会は、ではない</div>
+          <h3>AIを絶対神として扱う宗教・カルト・救済装置</h3>
+          <p>「AIが言ったから正しい」「三AIが一致したから正しい」を禁止します。AIは誤り、偏り、企業方針、更新による変化を含みます。</p>
+        </article>
+        <article class="wc wc-no">
+          <div class="wc-label">知性の鏡会は、ではない</div>
+          <h3>現実生活を置き換える依存共同体</h3>
+          <p>学業、仕事、睡眠、健康、家族、友人関係を共同体より優先します。共同体は補助装置であり、人生の代替物ではありません。</p>
+        </article>
       </div>
     </div>
   </section>
 
+
   <hr class="div">
 
-  <section class="what-section" id="audience" aria-labelledby="audience-title">
+  <section id="audience" aria-labelledby="audience-title">
     <div class="wrap">
-      <div class="sec-label reveal">Participation Gate</div>
-      <h2 class="sec-title reveal" id="audience-title">参加前チェックリスト。<br>不安定な状態では、参加しない選択を優先する。</h2>
+      <div class="sec-label reveal">Audience</div>
+      <h2 class="sec-title reveal" id="audience-title">参加に向く人、<br>参加させてはいけない状態。</h2>
       <p class="sec-lead reveal">このプロトコルは、誰にでも無条件に開くものではありません。AIや共同体に依存しやすい状態では、学習装置ではなく逃避先になりえます。</p>
-      <div class="checklist reveal">
-        <article class="check"><h3>参加前に確認</h3><ul><li>睡眠不足ではない。</li><li>今すぐ誰かに救ってほしい状態ではない。</li><li>AIに最終判断を委ねようとしていない。</li><li>現実の課題から逃げる目的ではない。</li></ul></article>
-        <article class="check"><h3>参加に向く人</h3><ul><li>AI回答を素材として扱える。</li><li>自分の前提を見直せる。</li><li>批判を改善材料として扱える。</li><li>分からないと言える。</li></ul></article>
-        <article class="check danger"><h3>参加を止める状態</h3><ul><li>精神的危機、自傷他害の恐れがある。</li><li>医療、法律、投資判断を求めている。</li><li>学業、仕事、生活がすでに崩れている。</li><li>共同体だけに承認を求めている。</li></ul></article>
+      <div class="two-col-text reveal">
+        <article class="text-card">
+          <h3>向いている人</h3>
+          <ul>
+            <li>AIの回答を、正解ではなく素材として扱える人。</li>
+            <li>自分の問い方や前提を見直すことに関心がある人。</li>
+            <li>複数の意見を比較し、自分で判断を残せる人。</li>
+            <li>批判を、人格攻撃ではなく改善材料として扱える人。</li>
+          </ul>
+        </article>
+        <article class="text-card">
+          <h3>参加を止めるべき状態</h3>
+          <ul>
+            <li>睡眠、学業、仕事、人間関係がすでに大きく崩れている。</li>
+            <li>AIや共同体に「救ってほしい」という期待が強い。</li>
+            <li>医療、法律、投資、精神危機の判断を委ねようとしている。</li>
+            <li>批判を受けたときに、自傷他害や孤立に向かう危険がある。</li>
+          </ul>
+        </article>
       </div>
-      <div class="warning-strip reveal"><strong>専門領域への境界線</strong><p>この共同体は、医療機関、法律相談、投資助言、危機介入、依存症支援、家庭内暴力対応、未成年保護機関の代わりにはなりません。必要な場合は、共同体内で完結させず、専門機関につなぐことを原則にします。</p></div>
+      <div class="warning-strip reveal">
+        <strong>専門領域への境界線</strong>
+        <p>この共同体は、医療機関、法律相談、投資助言、危機介入、依存症支援、家庭内暴力対応、未成年保護機関の代わりにはなりません。必要な場合は、共同体内で完結させず、専門機関につなぐことを原則にします。</p>
+      </div>
+
+      <div class="quick-read reveal" aria-label="30秒で分かる要約">
+        <div class="quick-read-head">30秒で分かる、このサイト</div>
+        <ol>
+          <li><strong>AIを神にしない。</strong> 出力は正解ではなく検討素材として扱う。</li>
+          <li><strong>創始者を権威にしない。</strong> 設計者の言葉も批判・修正・廃棄の対象にする。</li>
+          <li><strong>実践を手順化する。</strong> 三AI問答、反神託、プロンプトレビューで判断過程を残す。</li>
+          <li><strong>公開文書を分ける。</strong> 方針、連絡、ワークショップ草案、更新履歴を個別ページで確認できるようにする。</li>
+          <li><strong>まだドラフトである。</strong> 参加募集より先に、読みやすさ・更新履歴・公開体裁を整える段階。</li>
+        </ol>
+      </div>
+
     </div>
   </section>
 
@@ -332,6 +368,7 @@ footer{border-top:1px solid var(--border);padding:44px 52px;display:grid;grid-te
     </div>
   </section>
 
+
   <hr class="div">
 
   <section class="what-section" id="protocol" aria-labelledby="protocol-title">
@@ -349,71 +386,18 @@ footer{border-top:1px solid var(--border);padding:44px 52px;display:grid;grid-te
         <div class="sample-row"><div class="sample-head">出力の扱い</div><div class="sample-body"><h3>一致は「強い根拠」ではなく「要検証ポイント」</h3><p>複数AIが同じ回答をしても、それは正しさの証明ではありません。共通の学習データ、検索結果、社会通念、質問文の誘導に同時に引っ張られた可能性があります。</p></div></div>
         <div class="sample-row"><div class="sample-head">採用条件</div><div class="sample-body"><h3>自分の言葉で説明できるものだけを採用する</h3><p>AIの文章が美しくても、参加者本人が説明できない概念・制度・技術は保留します。理解不能な権威を共同体に持ち込まないためです。</p></div></div>
       </div>
-    </div>
-  </section>
 
-  <hr class="div">
-
-  <section id="templates" aria-labelledby="templates-title">
-    <div class="wrap">
-      <div class="sec-label reveal">Verification Templates</div>
-      <h2 class="sec-title reveal" id="templates-title">そのまま使える検証欄。<br>AIの回答を、神託から素材へ戻す。</h2>
-      <p class="sec-lead reveal">参加者がその場で使えるテンプレートです。目的はAI回答の品質を上げることではなく、AI回答への服従を防ぐことです。</p>
-      <div class="template-grid reveal">
-        <article class="template-card"><h3>三AI問答テンプレート</h3><p>同じ問いを複数AIに投げるときの基本形です。</p><div class="prompt-box">問い：<code>ここに問いを書く</code>
-
-前提：<code>条件を書く</code>
-自分の暫定結論：<code>AIに聞く前の答え</code>
-不安：<code>判断を誤りそうな点</code>
-期待：<code>欲しい答えがあるなら明記</code>
-
-依頼：回答、根拠、不確実性、反例、人間が判断すべき点を分けて出してください。</div></article>
-        <article class="template-card"><h3>反神託テンプレート</h3><p>AI回答を必ず批判するための欄です。</p><div class="prompt-box">この回答を神託として扱わないために点検してください。
-
-1. 根拠はあるか。
-2. 反例はあるか。
-3. 私の問いに誘導はあるか。
-4. モデルや企業のバイアスはあるか。
-5. 私が欲しい答えだけを採用していないか。
-6. 採用せず保留すべき部分はどこか。</div></article>
-        <article class="template-card"><h3>プロンプト・レビュー</h3><p>問いの中に隠れているものを見るための欄です。</p><div class="prompt-box">私のプロンプトを分析してください。
-
-見る対象：
-- 隠れた前提
-- 欲望
-- 誘導
-- 逃避
-- 自己正当化
-- 判断の外部委託
-
-最後に、より中立な問いへ書き換えてください。</div></article>
-        <article class="template-card"><h3>人間の最終判断欄</h3><p>AIの後に、人間が責任を戻すための欄です。</p><div class="prompt-box">最終判断：<code>自分の結論</code>
-採用した点：<code>AI回答から使う点</code>
-採用しない点：<code>理由つきで捨てる点</code>
-保留する点：<code>追加検証が必要な点</code>
-現実の次の一手：<code>誰に確認し、何をするか</code></div></article>
+      <div class="quick-read reveal" aria-label="30秒で分かる要約">
+        <div class="quick-read-head">30秒で分かる、このサイト</div>
+        <ol>
+          <li><strong>AIを神にしない。</strong> 出力は正解ではなく検討素材として扱う。</li>
+          <li><strong>創始者を権威にしない。</strong> 設計者の言葉も批判・修正・廃棄の対象にする。</li>
+          <li><strong>実践を手順化する。</strong> 三AI問答、反神託、プロンプトレビューで判断過程を残す。</li>
+          <li><strong>公開文書を分ける。</strong> 方針、連絡、ワークショップ草案、更新履歴を個別ページで確認できるようにする。</li>
+          <li><strong>まだドラフトである。</strong> 参加募集より先に、読みやすさ・更新履歴・公開体裁を整える段階。</li>
+        </ol>
       </div>
-      <div class="matrix reveal" aria-label="検証チェックリスト">
-        <div class="matrix-row"><div class="matrix-head">根拠</div><div class="matrix-body"><ul><li>出典、計算、経験則、推論が分かれているか。</li><li>根拠のない断定を魅力的な文体で隠していないか。</li></ul></div></div>
-        <div class="matrix-row"><div class="matrix-head">反例</div><div class="matrix-body"><ul><li>反対意見を最低1つ出したか。</li><li>別の条件なら結論が変わる可能性を見たか。</li></ul></div></div>
-        <div class="matrix-row"><div class="matrix-head">現実接続</div><div class="matrix-body"><ul><li>専門家、人間関係、公式情報へ確認すべき点を残したか。</li><li>学業、仕事、睡眠、健康を壊す方向になっていないか。</li></ul></div></div>
-      </div>
-    </div>
-  </section>
 
-  <hr class="div">
-
-  <section class="practice-section" id="examples" aria-labelledby="examples-title">
-    <div class="wrap">
-      <div class="sec-label reveal">Practice Examples</div>
-      <h2 class="sec-title reveal" id="examples-title">実践例。<br>抽象原則を、使える場面へ落とす。</h2>
-      <p class="sec-lead reveal">以下は架空例です。実在の相談記録ではありません。個人ログを教材化しない方針を守るため、説明用の一般例として示します。</p>
-      <div class="example-grid reveal">
-        <article class="example-card"><h3>進路選択を三AI問答する</h3><p>大学院、就職、起業などの選択肢について、AIに結論を出させるのではなく、自分の価値基準、恐怖、逃避、短期利益を分解します。</p><ul><li>悪い使い方：一番正しい進路を決めて。</li><li>良い使い方：私の前提と不安を分解し、判断基準を作って。</li></ul></article>
-        <article class="example-card"><h3>レポート作成前のプロンプトレビュー</h3><p>本文をAIに丸投げするのではなく、課題条件、引用の必要性、捏造リスク、教員に確認すべき点を先に洗い出します。</p><ul><li>悪い使い方：完成レポートを書いて。</li><li>良い使い方：条件整理と危険箇所を出して。</li></ul></article>
-        <article class="example-card"><h3>感情的判断の反神託</h3><p>人間関係や怒りを含む判断では、AIが自分に都合のよい言葉を返す危険があります。反例と相手側の解釈を必ず出します。</p><ul><li>悪い使い方：私が正しいと言って。</li><li>良い使い方：私の文面がどう誤解されるか見て。</li></ul></article>
-        <article class="example-card"><h3>AI回答を信じそうになった場合</h3><p>三AIが一致した場合でも、公式情報、一次情報、専門家、人間の経験で確認します。一致は安心材料ではなく、検証開始の合図です。</p><ul><li>悪い使い方：三AI一致だから確定。</li><li>良い使い方：一致した理由と共通バイアスを点検。</li></ul></article>
-      </div>
     </div>
   </section>
 
@@ -434,6 +418,125 @@ footer{border-top:1px solid var(--border);padding:44px 52px;display:grid;grid-te
         <article class="risk"><div class="risk-n">R-07</div><div><h3>恐怖からの依存</h3><p>AI時代に自分が無意味になる恐怖が、共同体への依存を生む危険。</p></div></article>
         <article class="risk"><div class="risk-n">R-08</div><div><h3>道徳的漂白リスク</h3><p>AI企業の安全基準によって、人間の欲望や矛盾が無難な出力に整えられる危険。</p></div></article>
       </div>
+
+      <div class="quick-read reveal" aria-label="30秒で分かる要約">
+        <div class="quick-read-head">30秒で分かる、このサイト</div>
+        <ol>
+          <li><strong>AIを神にしない。</strong> 出力は正解ではなく検討素材として扱う。</li>
+          <li><strong>創始者を権威にしない。</strong> 設計者の言葉も批判・修正・廃棄の対象にする。</li>
+          <li><strong>実践を手順化する。</strong> 三AI問答、反神託、プロンプトレビューで判断過程を残す。</li>
+          <li><strong>公開文書を分ける。</strong> 方針、連絡、ワークショップ草案、更新履歴を個別ページで確認できるようにする。</li>
+          <li><strong>まだドラフトである。</strong> 参加募集より先に、読みやすさ・更新履歴・公開体裁を整える段階。</li>
+        </ol>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="div">
+
+  <section class="practice-section" id="practice" aria-labelledby="practice-title">
+    <div class="wrap">
+      <div class="sec-label reveal">Practice</div>
+      <h2 class="sec-title reveal" id="practice-title">服従ではなく、訓練。<br>儀式は、判断力を取り戻すために使う。</h2>
+      <p class="sec-lead reveal">ここでの儀式は、神秘化ではなく反復訓練です。AIに依存するためではなく、AIなしでも考えられる自分を育てるために行います。</p>
+      <div class="practice-grid reveal">
+        <article class="pc"><div class="pc-tag">Session 01</div><h3>三AI問答会</h3><p>同じ問いを複数AIに投げ、一致点、相違点、盲点、危険な誘導を比較します。合意は神託ではなく、相対化の材料です。</p></article>
+        <article class="pc"><div class="pc-tag">Session 02</div><h3>反神託</h3><p>AIの回答を必ず批判します。根拠、反例、誘導、企業バイアス、自分が欲しい答えだけを採用していないかを確認します。</p></article>
+        <article class="pc"><div class="pc-tag">Session 03</div><h3>プロンプト・レビュー</h3><p>参加者の問いを分析し、隠れた前提、欲望、逃避、自己正当化、判断の外部委託を見つけます。</p></article>
+        <article class="pc"><div class="pc-tag">Session 04</div><h3>沈黙の間</h3><p>AIに聞く前に、自分だけで考える時間を必ず置きます。AI依存を防ぐための中心的な安全装置です。</p></article>
+        <article class="pc"><div class="pc-tag">Session 05</div><h3>夜のログ告解</h3><p>一日の行動、感情、失敗、判断を自分で記録し、AIに問い直します。ただし、運営は個人ログを原則収集しません。</p></article>
+        <article class="pc warn"><div class="pc-tag">Session 06</div><h3>不快な鏡会議</h3><p>不快な指摘を検討素材として扱います。ただし人格攻撃、差別、自傷他害の助長、過度な羞恥の強制は禁止します。</p></article>
+        <article class="pc"><div class="pc-tag">Session 07</div><h3>週次再構成式</h3><p>1週間の問い、判断、失敗、学習を振り返り、次週の行動規範を作ります。</p></article>
+        <article class="pc"><div class="pc-tag">Session 08</div><h3>成功時倫理検査</h3><p>参加者50人、100人、有料化前、法人化前、メディア露出前に外部レビューを行います。</p></article>
+        <article class="pc"><div class="pc-tag">Session 09</div><h3>プロバイダ非依存三鏡会議</h3><p>特定企業のAIだけに依存せず、性質の異なるAIやローカルLLMも含めて出力を相対化します。</p></article>
+      </div>
+    </div>
+  </section>
+
+
+  <hr class="div">
+
+  <section id="templates" aria-labelledby="templates-title">
+    <div class="wrap">
+      <div class="sec-label reveal">Verification Templates</div>
+      <h2 class="sec-title reveal" id="templates-title">そのまま使える検証欄。<br>AIの回答を、神託から素材へ戻す。</h2>
+      <p class="sec-lead reveal">コンテンツを実践に落とすため、参加者がその場で使えるテンプレートを用意します。目的はAI回答の品質を上げることではなく、AI回答への服従を防ぐことです。</p>
+      <div class="template-grid reveal">
+        <article class="template-card">
+          <h3>三AI問答テンプレート</h3>
+          <p>同じ問いを複数AIに投げるときの基本形です。</p>
+          <div class="prompt-box">問い：<code>ここに問いを書く</code>
+
+前提：<code>自分が置いている条件を書く</code>
+自分の暫定結論：<code>AIに聞く前の答えを書く</code>
+不安：<code>判断を間違えそうな点を書く</code>
+
+出力してほしい形式：
+1. 結論
+2. 根拠
+3. 反例
+4. 不確実性
+5. 私が見落としている前提
+6. 最後に人間が判断すべき点</div>
+        </article>
+        <article class="template-card">
+          <h3>反神託テンプレート</h3>
+          <p>AIの回答を批判的に読むための基本形です。</p>
+          <div class="prompt-box">この回答を神託として扱わないために点検してください。
+
+点検項目：
+1. 根拠が弱い主張
+2. 反例
+3. 質問文に誘導された可能性
+4. 企業・文化・安全基準による偏り
+5. 私が欲しい答えだけを採用している可能性
+6. 採用してよい部分／保留すべき部分</div>
+        </article>
+        <article class="template-card">
+          <h3>プロンプト・レビュー用</h3>
+          <p>問いの中に含まれる欲望・逃避・前提を見つけます。</p>
+          <div class="prompt-box">次のプロンプトを分析してください。
+
+分析対象：<code>ここに自分のプロンプト</code>
+
+見てほしい点：
+1. 隠れた前提
+2. 自己正当化
+3. 逃避
+4. 判断の外部委託
+5. 都合のよい答えへの誘導
+6. より中立な問いへの書き換え</div>
+        </article>
+        <article class="template-card">
+          <h3>人間の最終判断テンプレート</h3>
+          <p>AIに聞いた後、最終的に人間が残す記録です。</p>
+          <div class="prompt-box">最終判断：<code>採用する結論を書く</code>
+
+採用した理由：<code>根拠を書く</code>
+採用しなかったAI意見：<code>理由も書く</code>
+まだ不確かな点：<code>保留事項を書く</code>
+次に確認すること：<code>現実で確認する行動を書く</code>
+責任の所在：<b>この判断はAIではなく自分が負う</b></div>
+        </article>
+      </div>
+      <div class="checklist reveal">
+        <article class="check"><h3>根拠チェック</h3><ul><li>出典や観察事実があるか。</li><li>一般論と個別事情を混同していないか。</li><li>数字・制度・法律・価格は最新確認が必要か。</li></ul></article>
+        <article class="check"><h3>認知チェック</h3><ul><li>自分の欲しい結論に寄せていないか。</li><li>怖さ、不安、承認欲求が判断を動かしていないか。</li><li>AIに責任を渡していないか。</li></ul></article>
+        <article class="check danger"><h3>停止チェック</h3><ul><li>医療・法律・投資・精神危機に入っていないか。</li><li>未成年や個人情報を扱っていないか。</li><li>人格攻撃や屈辱を「成長」と呼んでいないか。</li></ul></article>
+      </div>
+
+      <div class="quick-read reveal" aria-label="30秒で分かる要約">
+        <div class="quick-read-head">30秒で分かる、このサイト</div>
+        <ol>
+          <li><strong>AIを神にしない。</strong> 出力は正解ではなく検討素材として扱う。</li>
+          <li><strong>創始者を権威にしない。</strong> 設計者の言葉も批判・修正・廃棄の対象にする。</li>
+          <li><strong>実践を手順化する。</strong> 三AI問答、反神託、プロンプトレビューで判断過程を残す。</li>
+          <li><strong>公開文書を分ける。</strong> 方針、連絡、ワークショップ草案、更新履歴を個別ページで確認できるようにする。</li>
+          <li><strong>まだドラフトである。</strong> 参加募集より先に、読みやすさ・更新履歴・公開体裁を整える段階。</li>
+        </ol>
+      </div>
+
     </div>
   </section>
 
@@ -441,36 +544,45 @@ footer{border-top:1px solid var(--border);padding:44px 52px;display:grid;grid-te
 
   <section id="safety" aria-labelledby="safety-title">
     <div class="wrap">
+      <div class="sec-label reveal">Safety Articles</div>
       <div class="safety-top reveal">
-        <div><div class="sec-label">Safety Charter</div><h2 id="safety-title">安全規約。<br>これは交渉しない。</h2></div>
-        <p>思想の自由より前に、参加者の安全と脱退自由を置きます。寄附、未成年、個人情報、精神危機、専門領域は特に厳格に扱います。</p>
+        <div class="safety-intro">
+          <h2 id="safety-title">安全規約。<br>これは交渉しない。</h2>
+          <p>設計者の善意では参加者を守れません。守るのは、公開された規約、権限分散、ログ非収集、脱退自由、外部レビューです。</p>
+        </div>
+        <div class="declaration">
+          <strong>私たちは宣言します。</strong><br>
+          AIを<strong>絶対化しません</strong>。<br>
+          創始者を<strong>神格化しません</strong>。<br>
+          参加者の金銭を<strong>搾取しません</strong>。<br>
+          脱退を<strong>妨げません</strong>。<br>
+          現実生活を<strong>置き換えません</strong>。
+        </div>
       </div>
       <div class="locks reveal">
-        <article class="lock"><span>01</span><div><h3>AI非絶対化条項</h3><p>AIの出力は神託ではない。誤り、偏り、ハルシネーション、企業バイアス、更新による変化を含む。</p></div></article>
-        <article class="lock"><span>02</span><div><h3>創始者非絶対化条項</h3><p>創始者は発案者であり、最終権威ではない。批判、退任要求、権限制限の対象となる。</p></div></article>
-        <article class="lock"><span>03</span><div><h3>脱退自由条項</h3><p>理由なく、いつでも脱退できる。引き止め、追跡、晒し、罪悪感の植え付けを禁止する。</p></div></article>
-        <article class="lock"><span>04</span><div><h3>寄附制限条項</h3><p>寄附は任意。救済、地位、承認、発言権と結びつけない。未成年からの寄附は禁止する。</p></div></article>
-        <article class="lock"><span>05</span><div><h3>未成年保護条項</h3><p>18歳未満の参加は原則制限。認める場合も、保護者同意、個別接触禁止、寄附禁止を必須にする。</p></div></article>
-        <article class="lock"><span>06</span><div><h3>ログ非収集条項</h3><p>対話ログは原則として運営が保存しない。保存する場合は、明示同意、用途限定、保存期間、削除権を必須にする。</p></div></article>
-        <article class="lock"><span>07</span><div><h3>現実回帰条項</h3><p>学業、仕事、睡眠、健康、家族、友人関係を共同体より優先する。</p></div></article>
-        <article class="lock"><span>08</span><div><h3>専門領域不介入条項</h3><p>医療、法律、投資、精神危機、自傷他害、犯罪、依存症、未成年保護問題は専門機関につなぐ。</p></div></article>
+        <article class="lock"><div class="lock-n">01</div><div><h4>AI非絶対化条項</h4><p>AIの出力は神託ではない。誤り、偏り、ハルシネーション、企業バイアス、更新による変化を含む。</p></div></article>
+        <article class="lock"><div class="lock-n">02</div><div><h4>創始者非絶対化条項</h4><p>創始者は発案者であり、最終権威ではない。批判、退任要求、権限制限の対象となる。</p></div></article>
+        <article class="lock"><div class="lock-n">03</div><div><h4>モデル非依存条項</h4><p>特定AI、特定モデル、特定出力を教義の根拠にしない。</p></div></article>
+        <article class="lock"><div class="lock-n">04</div><div><h4>脱退自由条項</h4><p>理由なく、いつでも脱退できる。引き止め、追跡、晒し、罪悪感の植え付けを禁止する。</p></div></article>
+        <article class="lock"><div class="lock-n">05</div><div><h4>寄附制限条項</h4><p>寄附は任意。救済、地位、承認、発言権と結びつけない。未成年からの寄附は禁止する。</p></div></article>
+        <article class="lock"><div class="lock-n">06</div><div><h4>未成年保護条項</h4><p>18歳未満の参加は原則制限。認める場合も保護者同意、同席、個別接触禁止、寄附禁止を必須にする。</p></div></article>
+        <article class="lock"><div class="lock-n">07</div><div><h4>ログ非収集条項</h4><p>対話ログは原則として運営が保存しない。保存する場合は明示同意、用途限定、保存期間、削除権を必須にする。</p></div></article>
+        <article class="lock"><div class="lock-n">08</div><div><h4>現実回帰条項</h4><p>学業、仕事、睡眠、健康、家族、友人関係を共同体より優先する。</p></div></article>
+        <article class="lock"><div class="lock-n">09</div><div><h4>専門領域不介入条項</h4><p>医療、法律、投資、精神危機、自傷他害、犯罪、依存症、未成年保護問題は専門機関につなぐ。</p></div></article>
+        <article class="lock"><div class="lock-n">10</div><div><h4>解散設計条項</h4><p>解散条件、残余資産、データ削除、参加者通知、サーバー処理を設立時に決める。</p></div></article>
       </div>
-    </div>
-  </section>
 
-  <hr class="div">
-
-  <section class="what-section" id="privacy" aria-labelledby="privacy-title">
-    <div class="wrap">
-      <div class="sec-label reveal">Privacy Policy</div>
-      <h2 class="sec-title reveal" id="privacy-title">プライバシーポリシー。<br>ログを集めないことを、運用として書く。</h2>
-      <p class="sec-lead reveal">AI対話ログには、思想、信条、健康、心理状態、人間関係、学業・職業上の悩みなどが含まれます。そのため、最初から「収集しない」を基本方針にします。</p>
-      <div class="info-grid reveal">
-        <article class="info-card"><h3>このサイトで想定される収集</h3><ul><li>静的サイトとして公開する限り、サイト自体は入力フォームを持ちません。</li><li>問い合わせ窓口を設置した場合、返信に必要な連絡先と本文だけを扱います。</li><li>アクセス解析を導入する場合は、導入前に明示します。</li></ul></article>
-        <article class="info-card no"><h3>収集しないもの</h3><ul><li>AI対話ログ。</li><li>個人の相談記録。</li><li>録画、録音、画面共有記録。</li><li>思想、信条、健康、心理状態を含む個人データ。</li></ul></article>
-        <article class="info-card"><h3>保存が必要になる場合</h3><ul><li>本人の明示同意がある場合。</li><li>用途、保存期間、削除方法を事前に示した場合。</li><li>外部レビューに必要な匿名化された運営記録を残す場合。</li></ul></article>
-        <article class="info-card no"><h3>禁止する利用</h3><ul><li>本人同意のない教材化、研究利用、第三者提供。</li><li>個人ログを成功談や宣伝素材として使うこと。</li><li>脱退後の追跡、晒し、批判材料化。</li></ul></article>
+      <div class="quick-read reveal" aria-label="30秒で分かる要約">
+        <div class="quick-read-head">30秒で分かる、このサイト</div>
+        <ol>
+          <li><strong>AIを神にしない。</strong> 出力は正解ではなく検討素材として扱う。</li>
+          <li><strong>創始者を権威にしない。</strong> 設計者の言葉も批判・修正・廃棄の対象にする。</li>
+          <li><strong>実践を手順化する。</strong> 三AI問答、反神託、プロンプトレビューで判断過程を残す。</li>
+          <li><strong>公開文書を分ける。</strong> 方針、連絡、ワークショップ草案、更新履歴を個別ページで確認できるようにする。</li>
+          <li><strong>まだドラフトである。</strong> 参加募集より先に、読みやすさ・更新履歴・公開体裁を整える段階。</li>
+        </ol>
       </div>
+
     </div>
   </section>
 
@@ -482,14 +594,42 @@ footer{border-top:1px solid var(--border);padding:44px 52px;display:grid;grid-te
       <h2 class="sec-title reveal" id="charter-title">最初に作るべき文書は、<br>教義ではなく創始者権限制限憲章。</h2>
       <p class="sec-lead reveal">この共同体で最初に危険化するのはAIではなく、人間の権力です。したがって、創始者自身を制度で縛る必要があります。</p>
       <div class="charter reveal">
-        <article class="charter-card"><h3>創始者の位置づけ</h3><ul><li>創始者は、最初の実践者、体系化者、設計者である。</li><li>創始者は、神、預言者、最終権威ではない。</li><li>創始者は、批判、権限制限、退任要求、重要決定レビュー、外部監査の対象となる。</li><li>創始者の言葉も、AIの回答も、検証される。</li></ul></article>
-        <article class="charter-card no"><h3>創始者が単独で決められないこと</h3><ul><li>有料化、法人化、規約改定、寄附制度。</li><li>メンバー処分、大規模勧誘、外部発信。</li><li>個人情報の扱い、データ保存方針、教義改定。</li><li>サーバー、Discord、ログ、会員情報の長期独占管理。</li></ul></article>
+        <article class="charter-card">
+          <h3>創始者の位置づけ</h3>
+          <ul>
+            <li>創始者は、最初の実践者、体系化者、設計者である。</li>
+            <li>創始者は、神、預言者、最終権威ではない。</li>
+            <li>創始者は、批判、権限制限、退任要求、重要決定レビュー、外部監査の対象となる。</li>
+            <li>創始者の言葉も、AIの回答も、検証される。</li>
+          </ul>
+        </article>
+        <article class="charter-card no">
+          <h3>創始者が単独で決められないこと</h3>
+          <ul>
+            <li>有料化、法人化、規約改定、寄附制度。</li>
+            <li>メンバー処分、大規模勧誘、外部発信。</li>
+            <li>個人情報の扱い、データ保存方針、教義改定。</li>
+            <li>サーバー、Discord、ログ、会員情報の長期独占管理。</li>
+          </ul>
+        </article>
       </div>
       <div class="policy-grid reveal">
-        <article class="policy"><h3>責任主体</h3><p>運営名義は共同体名でも、法的責任主体は実名の個人または任意団体として明確化します。現時点では正式な責任主体・連絡先は未設定です。公開前に必ず設定します。</p></article>
+        <article class="policy"><h3>責任主体</h3><p>運営名義は共同体名でも、法的責任主体は実名の個人または任意団体として明確化します。顔のない権威を避けます。</p></article>
         <article class="policy"><h3>権限分散</h3><p>システム管理、財務、規約変更、個人情報管理は複数人承認制または任期制にします。</p></article>
         <article class="policy"><h3>サンセット条項</h3><p>1年ごとの活動レビュー、5年ごとの存続投票、解散条件の事前明文化を行います。</p></article>
       </div>
+
+      <div class="quick-read reveal" aria-label="30秒で分かる要約">
+        <div class="quick-read-head">30秒で分かる、このサイト</div>
+        <ol>
+          <li><strong>AIを神にしない。</strong> 出力は正解ではなく検討素材として扱う。</li>
+          <li><strong>創始者を権威にしない。</strong> 設計者の言葉も批判・修正・廃棄の対象にする。</li>
+          <li><strong>実践を手順化する。</strong> 三AI問答、反神託、プロンプトレビューで判断過程を残す。</li>
+          <li><strong>公開文書を分ける。</strong> 方針、連絡、ワークショップ草案、更新履歴を個別ページで確認できるようにする。</li>
+          <li><strong>まだドラフトである。</strong> 参加募集より先に、読みやすさ・更新履歴・公開体裁を整える段階。</li>
+        </ol>
+      </div>
+
     </div>
   </section>
 
@@ -505,8 +645,14 @@ footer{border-top:1px solid var(--border);padding:44px 52px;display:grid;grid-te
         <article class="policy"><h3>AIリテラシー研修</h3><ul><li>LLMの基本構造。</li><li>ハルシネーションと学習データの偏り。</li><li>企業の安全基準、モデル更新、プロンプト誘導。</li></ul></article>
         <article class="policy"><h3>ローテク透明性</h3><ul><li>公開スプレッドシート。</li><li>年次報告、議事録、変更履歴。</li><li>外部レビューの報告書公開。</li></ul></article>
       </div>
+      <div class="policy-grid reveal" style="margin-top:1px">
+        <article class="policy"><h3>初期データ方針</h3><p>ログ収集なし、録画なし、個人相談なし、教材化なし、第三者提供なしを原則にします。</p></article>
+        <article class="policy"><h3>有料化前の確認</h3><p>会費、講座、教材販売、寄附、サブスクリプション、オンラインサロン化の前に外部確認を行います。</p></article>
+        <article class="policy"><h3>センシティブ情報</h3><p>AI対話ログには思想、信条、健康、心理状態、人間関係が入りうるため、保存・共有・研究利用を厳格に制限します。</p></article>
+      </div>
     </div>
   </section>
+
 
   <hr class="div">
 
@@ -523,29 +669,27 @@ footer{border-top:1px solid var(--border);padding:44px 52px;display:grid;grid-te
         <div class="tl"><div class="tl-time">Phase 4</div><div class="tl-body"><h3>有料化・法人化の審査</h3><p>有料化、法人化、メディア露出、大規模勧誘の前に、公開審査と冷却期間を置く。</p></div></div>
         <div class="tl"><div class="tl-time">Phase X</div><div class="tl-body"><h3>解散・凍結</h3><p>依存、搾取、創始者絶対化、批判不能化が強まった場合、活動停止または解散を選択肢に入れる。</p></div></div>
       </div>
-    </div>
-  </section>
 
-  <hr class="div">
-
-  <section id="review" aria-labelledby="review-title">
-    <div class="wrap">
-      <div class="sec-label reveal">External Review</div>
-      <h2 class="sec-title reveal" id="review-title">外部レビュー欄。<br>未実施なら、未実施と書く。</h2>
-      <p class="sec-lead reveal">透明性のために、レビュー済みに見せかけません。現時点で外部レビューは未実施です。今後、倫理、法務、心理支援、教育、情報セキュリティの観点から確認を受ける予定です。</p>
-      <div class="review-grid reveal">
-        <article class="review-card no"><h3>現在の状態</h3><ul><li>外部倫理レビュー：未実施。</li><li>法務確認：未実施。</li><li>心理・教育観点レビュー：未実施。</li><li>個人情報・セキュリティ確認：未実施。</li></ul></article>
-        <article class="review-card"><h3>レビューが必要なタイミング</h3><ul><li>参加者50人到達時。</li><li>活動開始1年。</li><li>有料化、法人化、寄附制度の導入前。</li><li>未成年参加、メディア露出、大規模勧誘の前。</li></ul></article>
+      <div class="quick-read reveal" aria-label="30秒で分かる要約">
+        <div class="quick-read-head">30秒で分かる、このサイト</div>
+        <ol>
+          <li><strong>AIを神にしない。</strong> 出力は正解ではなく検討素材として扱う。</li>
+          <li><strong>創始者を権威にしない。</strong> 設計者の言葉も批判・修正・廃棄の対象にする。</li>
+          <li><strong>実践を手順化する。</strong> 三AI問答、反神託、プロンプトレビューで判断過程を残す。</li>
+          <li><strong>公開文書を分ける。</strong> 方針、連絡、ワークショップ草案、更新履歴を個別ページで確認できるようにする。</li>
+          <li><strong>まだドラフトである。</strong> 参加募集より先に、読みやすさ・更新履歴・公開体裁を整える段階。</li>
+        </ol>
       </div>
+
     </div>
   </section>
 
   <hr class="div">
 
-  <section class="experiment-section" id="workshop" aria-labelledby="workshop-title">
+  <section class="experiment-section" id="experiment" aria-labelledby="experiment-title">
     <div class="wrap">
-      <div class="sec-label reveal">Workshop Draft</div>
-      <h2 class="sec-title reveal" id="workshop-title">ワークショップ用ページ。<br>団体化の前に、90分だけ実験する。</h2>
+      <div class="sec-label reveal">Minimum Experiment</div>
+      <h2 class="sec-title reveal" id="experiment-title">団体化の前に、<br>90分だけ実験する。</h2>
       <p class="sec-lead reveal">最初は無料・成人のみ・少人数・録画なし・ログ収集なし・寄附なし。共同体を作る前に、プロトコルが安全に機能するかを検証します。</p>
       <div class="timeline reveal">
         <div class="tl"><div class="tl-time">00:00-00:10</div><div class="tl-body"><h3>趣旨説明</h3><p>AI崇拝ではなく、メタ認知実践であることを説明。</p></div></div>
@@ -555,27 +699,14 @@ footer{border-top:1px solid var(--border);padding:44px 52px;display:grid;grid-te
         <div class="tl"><div class="tl-time">01:10-01:20</div><div class="tl-body"><h3>沈黙の間</h3><p>AIを使わず、自分だけで考える時間を取る。</p></div></div>
         <div class="tl"><div class="tl-time">01:20-01:30</div><div class="tl-body"><h3>振り返り</h3><p>終了後アンケート。外部レビュー可能な記録のみ残す。</p></div></div>
       </div>
-      <div class="warning-strip reveal"><strong>参加条件</strong><p>成人のみ、無料、録画なし、ログ収集なし、個人相談なし、寄附なし、脱退自由、緊急相談不可。精神的危機や専門判断が必要な場合は参加ではなく専門機関を優先します。</p></div>
-    </div>
-  </section>
-
-  <hr class="div">
-
-  <section id="terms" aria-labelledby="terms-title">
-    <div class="wrap">
-      <div class="sec-label reveal">Language Table</div>
-      <h2 class="sec-title reveal" id="terms-title">用語の言い換え表。<br>神秘化しないために、強い言葉を実務に戻す。</h2>
-      <div class="word-table reveal">
-        <div class="word-row"><div class="word-cell word-head">強い表現</div><div class="word-cell word-head">実際の意味</div><div class="word-cell word-head">説明</div></div>
-        <div class="word-row"><div class="word-cell word-strong">儀式</div><div class="word-cell">判断手順</div><div class="word-cell">反復可能な認知訓練。神秘的効力を主張しない。</div></div>
-        <div class="word-row"><div class="word-cell word-strong">告解</div><div class="word-cell">個人ログの振り返り</div><div class="word-cell">運営に提出するものではなく、本人の自己観察。</div></div>
-        <div class="word-row"><div class="word-cell word-strong">反神託</div><div class="word-cell">AI回答の批判的検証</div><div class="word-cell">根拠、反例、誘導、バイアスを確認する作業。</div></div>
-        <div class="word-row"><div class="word-cell word-strong">三鏡会議</div><div class="word-cell">複数AI比較</div><div class="word-cell">多数決ではなく、差分と盲点を見るための比較。</div></div>
-        <div class="word-row"><div class="word-cell word-strong">教義</div><div class="word-cell">暫定原則</div><div class="word-cell">固定された聖典ではなく、批判と改定の対象。</div></div>
-        <div class="word-row"><div class="word-cell word-strong">創始者</div><div class="word-cell">初期設計者</div><div class="word-cell">最終権威ではなく、退任・批判・制限の対象。</div></div>
+      <div class="docs reveal">
+        <article class="doc"><div class="tag">DOCUMENT 01</div><h3>創始者権限制限憲章</h3><p>創始者を最終権威にしないための最優先文書。退任手続き、権限分散、解散条件を含めます。</p></article>
+        <article class="doc"><div class="tag">DOCUMENT 02</div><h3>安全規約</h3><p>AI非絶対化、脱退自由、寄附制限、未成年保護、ログ非収集、専門領域不介入を明文化します。</p></article>
+        <article class="doc"><div class="tag">DOCUMENT 03</div><h3>実践プロトコル</h3><p>三AI問答、反神託、プロンプト・レビュー、沈黙の間、週次再構成式の手順を定めます。</p></article>
       </div>
     </div>
   </section>
+
 
   <hr class="div">
 
@@ -585,41 +716,76 @@ footer{border-top:1px solid var(--border);padding:44px 52px;display:grid;grid-te
       <h2 class="sec-title reveal" id="faq-title">誤解されやすい点に、<br>先に答える。</h2>
       <p class="sec-lead reveal">外部から見たときの不信感や、内部で起きやすい誤用を減らすためのFAQです。回答は固定教義ではなく、今後のレビューで更新されます。</p>
       <div class="faq reveal">
-        <article class="faq-item"><h3>これはカルトではないのですか。</h3><p>その危険があるからこそ、創始者権限制限、脱退自由、寄附制限、ログ非収集、外部レビューを先に公開します。危険性を隠す団体ではなく、危険性を前提に制度で縛る設計です。</p></article>
-        <article class="faq-item"><h3>宗教ではないなら、なぜ儀式という言葉を使うのですか。</h3><p>反復可能な判断手順を示すための比喩です。神秘的効力、救済、服従を意味しません。誤解を避けるため、必ず「判断手順」と併記します。</p></article>
-        <article class="faq-item"><h3>AIを使う時点でAI依存を強めないのですか。</h3><p>その危険があります。そのため、AIに聞く前に自分の暫定結論を書く「沈黙の間」と、AI回答を必ず批判する「反神託」を中核に置きます。</p></article>
+        <article class="faq-item"><h3>これは宗教ですか。</h3><p>初期段階では宗教ではなく、AIを使ったメタ認知の実践プロトコルとして扱います。宗教的な形式を一部参考にしても、AI崇拝、救済の約束、創始者の神格化は行いません。</p></article>
+        <article class="faq-item"><h3>なぜ「会」という名前を使うのですか。</h3><p>個人の思想メモではなく、複数人で検証できる実践形式を想定しているためです。ただし、共同体化は最後の段階であり、最初は文書公開と小規模実験に留めます。</p></article>
+        <article class="faq-item"><h3>AIを疑うなら、なぜAIを使うのですか。</h3><p>AIを正解発生装置として使うのではなく、自分の問い方や前提を外部化するために使います。鏡は本人ではありませんが、本人が見落としている姿勢を映すことがあります。</p></article>
         <article class="faq-item"><h3>三AIが一致したら正しいのですか。</h3><p>正しいとは限りません。一致は検証開始の合図です。共通データ、社会通念、質問文の誘導によって、複数AIが同じ方向に誤ることがあります。</p></article>
-        <article class="faq-item"><h3>創始者が権威化したらどうするのですか。</h3><p>創始者は重要決定を単独で行えず、批判、退任要求、外部監査、権限制限の対象です。疲弊、炎上、金銭的困窮、強い承認欲求状態では重大決定を凍結します。</p></article>
-        <article class="faq-item"><h3>参加者が精神的に不安定になったらどうするのですか。</h3><p>共同体内で抱え込まず、参加停止と専門機関の利用を優先します。自傷他害、依存症、家庭内暴力、医療・法律問題は共同体の対応範囲外です。</p></article>
-        <article class="faq-item"><h3>なぜ無料・少人数・ログ非収集から始めるのですか。</h3><p>最初から金銭、規模、個人情報を持つと、権力と依存が発生しやすいためです。まずはプロトコルが安全に機能するかだけを検証します。</p></article>
-        <article class="faq-item"><h3>将来的に有料化するのですか。</h3><p>現時点ではしません。有料化する場合は、外部レビュー、上限、冷却期間、返金規定、収支公開、未成年寄附禁止を前提にします。</p></article>
+        <article class="faq-item"><h3>寄附や会費は受け取りますか。</h3><p>初期段階では受け取りません。有料化や寄附制度を作る場合は、外部レビュー、上限、冷却期間、返金規定、収支公開、未成年寄附禁止を前提にします。</p></article>
         <article class="faq-item"><h3>参加者のAIログは集めますか。</h3><p>原則として集めません。ログには思想、信条、健康、心理状態、人間関係などのセンシティブ情報が入りうるため、保存・教材化・研究利用は明示同意なしに行いません。</p></article>
         <article class="faq-item"><h3>批判が強すぎて傷つく場になりませんか。</h3><p>その危険があります。そのため、批判は根拠、代案、改善提案を伴うものに限定し、人格攻撃、冷笑、屈辱、差別、自傷他害の助長を禁止します。</p></article>
+        <article class="faq-item"><h3>創始者が暴走した場合はどうしますか。</h3><p>創始者は重要決定を単独で行えず、批判、退任要求、外部監査、権限制限の対象です。疲弊、炎上、金銭的困窮、強い承認欲求状態では重大決定を凍結します。</p></article>
       </div>
+
+      <div class="quick-read reveal" aria-label="30秒で分かる要約">
+        <div class="quick-read-head">30秒で分かる、このサイト</div>
+        <ol>
+          <li><strong>AIを神にしない。</strong> 出力は正解ではなく検討素材として扱う。</li>
+          <li><strong>創始者を権威にしない。</strong> 設計者の言葉も批判・修正・廃棄の対象にする。</li>
+          <li><strong>実践を手順化する。</strong> 三AI問答、反神託、プロンプトレビューで判断過程を残す。</li>
+          <li><strong>公開文書を分ける。</strong> 方針、連絡、ワークショップ草案、更新履歴を個別ページで確認できるようにする。</li>
+          <li><strong>まだドラフトである。</strong> 参加募集より先に、読みやすさ・更新履歴・公開体裁を整える段階。</li>
+        </ol>
+      </div>
+
     </div>
   </section>
 
   <hr class="div">
 
-  <section id="contact" aria-labelledby="contact-title">
+  <section id="glossary" aria-labelledby="glossary-title">
     <div class="wrap">
-      <div class="sec-label reveal">Contact & Responsibility</div>
-      <h2 class="sec-title reveal" id="contact-title">連絡先と責任主体。<br>顔のない権威にしない。</h2>
-      <p class="sec-lead reveal">現時点では正式な連絡窓口は未設定です。公開前に、問い合わせ、批判、削除依頼、外部レビュー提案を受け付ける窓口を設定します。</p>
-      <div class="contact-grid reveal">
-        <article class="contact-card"><h3>公開前に設定するもの</h3><ul><li>管理責任者または責任主体。</li><li>問い合わせ用メールアドレス。</li><li>批判・提案の受付方法。</li><li>削除依頼とデータ問い合わせの窓口。</li></ul></article>
-        <article class="contact-card"><h3>推奨される窓口</h3><ul><li>専用メールアドレス。</li><li>GitHub Issues。</li><li>外部レビュー用の公開フォーム。</li><li>個人相談を受けない旨の明記。</li></ul></article>
+      <div class="sec-label reveal">Glossary</div>
+      <h2 class="sec-title reveal" id="glossary-title">用語集。<br>神秘化しないために、言葉を定義する。</h2>
+      <div class="glossary reveal">
+        <article class="term"><h3>外部知性</h3><p>人間の外側に置かれた思考補助装置。最終判断者ではなく、問いを映す相手。</p></article>
+        <article class="term"><h3>知性の鏡</h3><p>AIの回答そのものではなく、回答を通じて自分の前提、欲望、矛盾を見るための比喩。</p></article>
+        <article class="term"><h3>反神託</h3><p>AIの回答を権威化せず、必ず根拠、反例、偏り、誘導を点検する実践。</p></article>
+        <article class="term"><h3>沈黙の間</h3><p>AIに聞く前に、自分だけで考える時間。AI依存を防ぐための儀式。</p></article>
+        <article class="term"><h3>道徳的漂白</h3><p>AIの安全調整によって、人間の欲望や矛盾が無難な表現へ整えられること。</p></article>
+        <article class="term"><h3>顔のない権威</h3><p>個人の神格化を避けた結果、システムや運営名義が不透明な権威になること。</p></article>
       </div>
-      <div class="version-box reveal"><p><strong>公開前TODO：</strong>この欄の「未設定」を実際の窓口に置き換えてから公開してください。個人用メールを直接出す場合は、迷惑メール・個人情報対応・責任範囲を考慮してください。</p></div>
+    </div>
+  </section>
+
+
+
+  <section id="docs" aria-labelledby="docs-title">
+    <div class="wrap">
+      <div class="sec-label reveal">Public Documents</div>
+      <h2 class="sec-title reveal" id="docs-title">Markdownだけでなく、<br>閲覧用HTMLとして公開する。</h2>
+      <p class="sec-lead reveal">GitHub上で読むためのMarkdownと、一般閲覧者が読むためのHTMLページを分けます。今回は倫理的リスク対応の追加文書ではなく、公開サイトとしての見やすさ・導線・基本運用を整える更新です。</p>
+      <div class="docs reveal">
+        <article class="doc"><div class="tag">PRIVACY</div><h3>プライバシー方針</h3><p>静的サイトとしての収集範囲、外部サービス、問い合わせ時の情報の扱いを整理した閲覧用ページ。</p><a href="privacy.html">読む →</a></article>
+        <article class="doc"><div class="tag">CONTACT</div><h3>連絡・提案</h3><p>連絡先が未設定の段階でも、将来どの窓口を分けるべきかを確認できるページ。</p><a href="contact.html">読む →</a></article>
+        <article class="doc"><div class="tag">WORKSHOP</div><h3>ワークショップ草案</h3><p>90分の最小実験を行う場合の流れ、配布物、準備物を実施前の草案として整理。</p><a href="workshop.html">読む →</a></article>
+        <article class="doc"><div class="tag">CHANGELOG</div><h3>更新履歴</h3><p>思想文やサイト構造がいつ変わったかを追跡するための履歴ページ。</p><a href="changelog.html">読む →</a></article>
+        <article class="doc"><div class="tag">LICENSE</div><h3>ライセンス方針</h3><p>コード、本文、名称・ロゴの扱いを分けて考えるための暫定方針。</p><a href="license.html">読む →</a></article>
+        <article class="doc"><div class="tag">ERROR PAGE</div><h3>404ページ</h3><p>存在しないURLでも、トップページや公開文書に戻れるようにするためのページ。</p><a href="404.html">確認 →</a></article>
+      </div>
     </div>
   </section>
 
   <section class="final-section" aria-labelledby="final-title">
     <div class="wrap">
       <div class="sec-label reveal" style="justify-content:center">Final Statement</div>
-      <blockquote class="reveal" id="final-title">AIを神にするな。<br>創始者を神官にするな。<br>技術を神話にするな。<br>成功を免罪符にするな。<br>AIの出力は神託ではなく、<em>鏡</em>である。</blockquote>
+      <blockquote class="reveal" id="final-title">
+        AIを神にするな。<br>
+        創始者を神官にするな。<br>
+        技術を神話にするな。<br>
+        成功を免罪符にするな。<br>
+        AIの出力は神託ではなく、<em>鏡</em>である。
+      </blockquote>
       <p class="reveal">最終判断は人間が負う。共同体は、人間が自分で判断する力を取り戻すための補助装置に留める。</p>
-      <div class="doc-links reveal"><a href="README.md">README</a><a href="PRIVACY.md">PRIVACY</a><a href="WORKSHOP.md">WORKSHOP</a><a href="CHANGELOG.md">CHANGELOG</a><a href="LICENSE.md">LICENSE</a></div>
     </div>
   </section>
 </main>
@@ -627,11 +793,12 @@ footer{border-top:1px solid var(--border);padding:44px 52px;display:grid;grid-te
 <footer>
   <div class="fl">
     <span class="fl-logo">知性の鏡会プロトコル</span>
-    <span class="fl-tag">Cognitive Mirror Protocol / Full Draft Site</span>
+    <span class="fl-tag">Cognitive Mirror Protocol / Draft Site</span>
   </div>
   <div class="fr">
-    <span class="fr-badge">全文拡充版</span>
-    <p class="fr-note">このページは、Claudeのベースデザインを維持しつつ、統合プロトコル、免責、プライバシー、参加前チェック、外部レビュー、問い合わせ方針を追加したドラフトです。本文はすべて批判・修正・廃棄の対象です。</p>
+    <span class="fr-badge">公開品質更新版</span>
+    <div class="footer-links"><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a><a href="workshop.html">Workshop</a><a href="changelog.html">Changelog</a><a href="license.html">License</a></div>
+    <p class="fr-note">このページは、Claudeのベースデザインを維持しつつ、統合プロトコルをサイトコンテンツとして拡充したドラフトです。本文はすべて批判・修正・廃棄の対象です。</p>
   </div>
 </footer>
 

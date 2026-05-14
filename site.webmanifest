@@ -1,0 +1,21 @@
+{
+  "name": "知性の鏡会プロトコル",
+  "short_name": "知性の鏡会",
+  "description": "AIを神託化しないためのメタ認知実践プロトコル",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#080808",
+  "theme_color": "#080808",
+  "icons": [
+    {
+      "src": "assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/ogp.png",
+      "sizes": "1200x630",
+      "type": "image/png"
+    }
+  ]
+}
