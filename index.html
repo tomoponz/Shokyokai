@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>知性の鏡会プロトコル — AIを神にしないための実践共同体</title>
+<meta name="description" content="知性の鏡会プロトコルは、AIを神として崇拝する団体ではありません。AIを人間の思考・欲望・矛盾・偏りを映す鏡として用い、自己認識と判断力を鍛えるための思想・実践共同体の設計書です。">
+<meta name="theme-color" content="#080808">
+<meta property="og:title" content="知性の鏡会プロトコル">
+<meta property="og:description" content="AIは神ではなく、鏡である。AI出力を神託化しないための安全規約・実践・創始者権限制限憲章。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#080808;
+  --bg2:#0f0f0f;
+  --bg3:#161616;
+  --panel:#111;
+  --white:#eeeae4;
+  --silver:#b6b0a8;
+  --silver2:#8b8780;
+  --silver-dim:#5f5b55;
+  --silver-faint:rgba(255,255,255,0.055);
+  --accent:#8ba5bc;
+  --accent2:#4d728c;
+  --warn:#b99b75;
+  --danger:#b56f6f;
+  --border:rgba(255,255,255,0.085);
+  --border2:rgba(255,255,255,0.2);
+  --shadow:0 24px 80px rgba(0,0,0,.35);
+  --serif:'Noto Serif JP','Yu Mincho','Hiragino Mincho ProN',Georgia,serif;
+  --sans:'Noto Sans JP','Yu Gothic','Hiragino Sans',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{background:var(--bg);color:var(--silver);font-family:var(--sans);font-weight:300;line-height:1.88;font-size:15px;overflow-x:hidden;text-rendering:optimizeLegibility}
+::selection{background:var(--accent2);color:var(--white)}
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:#2a2a2a;border-radius:4px}
+a{color:inherit}
+.skip-link{position:absolute;left:-999px;top:12px;background:var(--white);color:#111;padding:10px 14px;z-index:999;border-radius:2px;text-decoration:none;font-weight:500}
+.skip-link:focus{left:12px}
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;gap:22px;
+  padding:22px 52px;
+  background:rgba(8,8,8,0.86);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border);
+  transition:padding .28s ease,background .28s ease;
+}
+nav.scrolled{padding:14px 52px;background:rgba(8,8,8,0.94)}
+.nav-logo{font-family:var(--serif);font-size:16px;font-weight:400;color:var(--white);letter-spacing:.14em;text-decoration:none;white-space:nowrap}
+.nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+.nav-links a{font-size:11px;letter-spacing:.13em;color:var(--silver-dim);text-decoration:none;transition:color .2s ease;white-space:nowrap}
+.nav-links a:hover,.nav-links a:focus{color:var(--silver)}
+.nav-badge{font-size:10px;letter-spacing:.12em;color:var(--silver-dim);border:1px solid var(--border2);padding:4px 10px;border-radius:999px;white-space:nowrap}
+.menu-btn{display:none;background:transparent;color:var(--silver);border:1px solid var(--border2);border-radius:999px;padding:6px 10px;font-size:11px;letter-spacing:.14em}
+.hero{
+  min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;
+  padding:128px 52px 84px;position:relative;overflow:hidden;isolation:isolate;
+}
+.hero::before{
+  content:'';position:absolute;inset:-20%;z-index:-2;
+  background:
+    radial-gradient(ellipse 52% 50% at 76% 38%,rgba(95,140,170,.12) 0%,transparent 68%),
+    radial-gradient(ellipse 34% 42% at 20% 80%,rgba(185,155,117,.045) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero::after{
+  content:'';position:absolute;inset:0;z-index:-1;opacity:.18;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+  background-size:58px 58px;
+  mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,#000 0%,transparent 78%);
+}
+.hero-eyebrow{font-size:11px;letter-spacing:.25em;color:var(--accent);margin-bottom:28px;display:flex;align-items:center;gap:12px;text-transform:uppercase}
+.hero-eyebrow::before{content:'';width:34px;height:1px;background:var(--accent)}
+h1.hero-title{font-family:var(--serif);font-size:clamp(42px,7vw,88px);font-weight:300;color:var(--white);line-height:1.12;letter-spacing:.045em;margin-bottom:24px;max-width:960px}
+h1.hero-title em{font-style:normal;color:var(--accent)}
+.hero-subtitle{font-family:var(--serif);font-size:clamp(14px,1.55vw,18px);font-weight:300;color:var(--silver);max-width:710px;line-height:1.9;margin-bottom:38px;letter-spacing:.035em}
+.hero-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.hero-cta,.ghost-cta{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.15em;color:var(--white);text-decoration:none;border:1px solid var(--border2);padding:14px 24px;border-radius:2px;transition:all .25s ease;background:rgba(255,255,255,.015)}
+.hero-cta:hover,.ghost-cta:hover{background:rgba(255,255,255,.055);transform:translateY(-1px)}
+.ghost-cta{color:var(--silver);border-color:var(--border)}
+.hero-note{font-size:11px;color:var(--silver-dim);letter-spacing:.06em;max-width:720px}
+.mirror-deco{position:absolute;right:7%;top:51%;transform:translateY(-50%);width:190px;height:272px;border:1px solid rgba(255,255,255,.12);border-radius:50% 50% 42% 42%;background:linear-gradient(135deg,rgba(139,165,188,.08),rgba(255,255,255,.006) 62%);opacity:.62;box-shadow:inset 0 0 70px rgba(139,165,188,.04)}
+.mirror-deco::after{content:'';position:absolute;top:12px;left:12px;right:12px;bottom:12px;border:1px solid rgba(255,255,255,.055);border-radius:inherit}
+.mirror-deco::before{content:'検証';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--serif);font-size:13px;letter-spacing:.4em;color:rgba(238,234,228,.18);writing-mode:vertical-rl}
+section{padding:104px 52px;position:relative}
+hr.div{border:none;border-top:1px solid var(--border);margin:0 52px}
+.wrap{max-width:1160px;margin:0 auto}
+.sec-label{font-size:10px;letter-spacing:.26em;color:var(--accent);margin-bottom:44px;display:flex;align-items:center;gap:14px;text-transform:uppercase}
+.sec-label::before{content:'';width:24px;height:1px;background:var(--accent)}
+h2.sec-title{font-family:var(--serif);font-size:clamp(26px,3.7vw,43px);font-weight:300;color:var(--white);line-height:1.28;letter-spacing:.035em;margin-bottom:22px;max-width:780px}
+.sec-lead{font-size:15px;color:var(--silver);max-width:760px;line-height:1.95;margin-bottom:58px}
+.small{font-size:12px;color:var(--silver-dim);line-height:1.8}
+strong{font-weight:500;color:var(--white)}
+mark{background:transparent;color:var(--accent);font-weight:500}
+.kicker-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);box-shadow:var(--shadow)}
+.kicker{background:var(--bg2);padding:22px 20px;min-height:118px}
+.kicker span{display:block;font-size:10px;letter-spacing:.18em;color:var(--accent2);margin-bottom:10px;text-transform:uppercase}
+.kicker p{font-size:13px;color:var(--silver);line-height:1.75}
+.kicker.deny span{color:var(--danger)}
+.what-section,.practice-section,.structure-section,.experiment-section{background:var(--bg2)}
+.what-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);margin-top:58px;box-shadow:var(--shadow)}
+.wc{background:var(--bg2);padding:38px 34px;min-height:196px}
+.wc-label{font-size:10px;letter-spacing:.2em;color:var(--accent);margin-bottom:14px;text-transform:uppercase}
+.wc h3{font-family:var(--serif);font-size:18px;color:var(--white);font-weight:400;margin-bottom:12px;line-height:1.45}
+.wc p{font-size:13px;color:var(--silver);line-height:1.86}
+.wc-no{background:var(--bg3)}
+.wc-no .wc-label{color:var(--danger)}
+.wc-no h3{color:#c7aaa3}
+.principles{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:58px}
+.principle{background:var(--bg);padding:30px 24px;transition:background .22s ease}
+.principle:hover{background:var(--silver-faint)}
+.principle .num{font-family:var(--serif);font-size:12px;letter-spacing:.14em;color:var(--accent2);margin-bottom:22px;display:block}
+.principle h3{font-family:var(--serif);font-size:17px;color:var(--white);font-weight:400;line-height:1.45;margin-bottom:10px}
+.principle p{font-size:13px;line-height:1.85;color:var(--silver)}
+ol.doctrine-list{list-style:none;border:1px solid var(--border);margin-top:58px;background:var(--bg)}
+.di{display:grid;grid-template-columns:72px 1fr;border-bottom:1px solid var(--border);transition:background .25s ease}
+.di:last-child{border-bottom:none}.di:hover{background:var(--silver-faint)}
+.di-num{font-family:var(--serif);font-size:13px;color:var(--accent2);letter-spacing:.1em;padding:30px 0 30px 30px;border-right:1px solid var(--border);display:flex;align-items:flex-start}
+.di-body{padding:30px 34px}
+.di-body h3{font-family:var(--serif);font-size:17px;color:var(--white);font-weight:400;margin-bottom:8px}.di-body p{font-size:13px;color:var(--silver);line-height:1.85}
+.risk-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:58px}
+.risk{background:var(--bg2);padding:28px 26px;display:grid;grid-template-columns:58px 1fr;gap:16px;min-height:150px}
+.risk-n{font-family:var(--serif);font-size:12px;letter-spacing:.12em;color:var(--danger);padding-top:4px}.risk h3{font-family:var(--serif);font-size:16px;color:var(--white);font-weight:400;margin-bottom:8px}.risk p{font-size:13px;line-height:1.82;color:var(--silver)}
+.practice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:58px}
+.pc{background:var(--bg2);padding:34px 28px;transition:background .25s ease;min-height:236px}.pc:hover{background:var(--bg3)}.pc-tag{font-size:10px;letter-spacing:.18em;color:var(--accent2);margin-bottom:18px;text-transform:uppercase}.pc h3{font-family:var(--serif);font-size:16px;color:var(--white);font-weight:400;margin-bottom:10px}.pc p{font-size:13px;color:var(--silver);line-height:1.85}.pc.warn .pc-tag{color:var(--warn)}
+.safety-top{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;margin-bottom:58px}.safety-intro h2{font-family:var(--serif);font-size:clamp(24px,3vw,38px);color:var(--white);font-weight:300;line-height:1.33;letter-spacing:.03em;margin-bottom:18px}.safety-intro p{font-size:14px;color:var(--silver);line-height:1.93}.declaration{border:1px solid var(--border2);padding:30px;font-family:var(--serif);font-size:14px;color:var(--silver);line-height:2.12;letter-spacing:.03em;background:linear-gradient(135deg,rgba(139,165,188,.055),transparent 60%)}
+.locks{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border)}.lock{background:var(--bg);padding:26px;display:grid;grid-template-columns:50px 1fr;gap:14px;transition:background .25s ease}.lock:hover{background:var(--silver-faint)}.lock-n{font-family:var(--serif);font-size:11px;color:var(--accent2);letter-spacing:.1em;padding-top:2px}.lock h4{font-size:13px;color:var(--white);font-weight:400;margin-bottom:5px}.lock p{font-size:12px;color:var(--silver);line-height:1.82}
+.charter{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);margin-top:58px}.charter-card{background:var(--bg2);padding:32px 30px}.charter-card h3{font-family:var(--serif);font-size:17px;font-weight:400;color:var(--white);margin-bottom:14px}.charter-card ul{list-style:none;display:flex;flex-direction:column;gap:9px}.charter-card li{font-size:13px;line-height:1.75;padding-left:18px;position:relative}.charter-card li::before{content:'';position:absolute;left:0;top:12px;width:6px;height:1px;background:var(--accent2)}.charter-card.no li::before{background:var(--danger)}
+.policy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:58px}.policy{background:var(--bg);padding:30px 26px}.policy h3{font-family:var(--serif);font-size:16px;color:var(--white);font-weight:400;margin-bottom:12px}.policy p,.policy li{font-size:13px;line-height:1.84;color:var(--silver)}.policy ul{list-style:none;display:flex;flex-direction:column;gap:8px}.policy li{padding-left:16px;position:relative}.policy li::before{content:'—';position:absolute;left:0;color:var(--accent2)}
+.timeline{border:1px solid var(--border);background:var(--bg);margin-top:58px}.tl{display:grid;grid-template-columns:160px 1fr;border-bottom:1px solid var(--border)}.tl:last-child{border-bottom:none}.tl-time{font-family:var(--serif);font-size:12px;color:var(--accent2);letter-spacing:.12em;padding:22px 28px;border-right:1px solid var(--border)}.tl-body{padding:22px 28px}.tl-body h3{font-size:14px;color:var(--white);font-weight:400;margin-bottom:4px}.tl-body p{font-size:13px;color:var(--silver);line-height:1.78}
+.docs{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:58px}.doc{background:var(--bg2);padding:30px 26px}.doc .tag{font-size:10px;letter-spacing:.18em;color:var(--accent2);margin-bottom:18px}.doc h3{font-family:var(--serif);font-size:17px;color:var(--white);font-weight:400;margin-bottom:10px}.doc p{font-size:13px;line-height:1.85;color:var(--silver)}
+.final-section{text-align:center;padding:112px 52px;background:linear-gradient(180deg,var(--bg),#0b0b0b)}.final-section blockquote{font-family:var(--serif);font-size:clamp(20px,3.4vw,40px);line-height:1.65;color:var(--white);letter-spacing:.045em;max-width:1000px;margin:0 auto 28px}.final-section p{font-size:12px;color:var(--silver-dim);letter-spacing:.08em}.final-section em{font-style:normal;color:var(--accent)}
+footer{border-top:1px solid var(--border);padding:44px 52px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;background:var(--bg)}.fl{display:flex;flex-direction:column;gap:7px}.fl-logo{font-family:var(--serif);font-size:14px;color:var(--white);letter-spacing:.1em}.fl-tag{font-size:11px;color:var(--silver-dim);letter-spacing:.06em}.fr{display:flex;flex-direction:column;align-items:flex-end;gap:9px}.fr-badge{font-size:10px;letter-spacing:.14em;color:var(--silver-dim);border:1px solid var(--border);padding:4px 10px;border-radius:999px}.fr-note{font-size:11px;color:var(--silver-dim);text-align:right;line-height:1.7;max-width:560px}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}.reveal.on{opacity:1;transform:translateY(0)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.hero-cta:hover,.ghost-cta:hover{transform:none}}
+@media(max-width:1060px){.nav-links{gap:15px}.nav-links a{font-size:10px}.kicker-grid,.principles{grid-template-columns:repeat(2,1fr)}.practice-grid,.policy-grid,.docs{grid-template-columns:1fr 1fr}.mirror-deco{right:3%;opacity:.35}}
+@media(max-width:768px){body{font-size:14px}nav{padding:15px 18px;align-items:flex-start;flex-wrap:wrap}nav.scrolled{padding:12px 18px}.nav-logo{font-size:14px}.menu-btn{display:inline-flex}.nav-badge{display:none}.nav-links{display:none;width:100%;flex-direction:column;align-items:flex-start;gap:0;padding-top:10px;border-top:1px solid var(--border)}.nav-links.open{display:flex}.nav-links li{width:100%}.nav-links a{display:block;width:100%;padding:11px 0;font-size:12px}.hero{padding:96px 20px 62px}.hero-actions{align-items:stretch}.hero-cta,.ghost-cta{width:100%;justify-content:center}.mirror-deco{display:none}section{padding:68px 20px}hr.div{margin:0 20px}.sec-label{margin-bottom:32px}.sec-lead{margin-bottom:42px}.what-grid,.risk-grid,.practice-grid,.locks,.charter,.policy-grid,.timeline,.docs,.kicker-grid,.principles{grid-template-columns:1fr}.wc,.pc,.policy,.doc,.charter-card{padding:26px 20px}.di{grid-template-columns:48px 1fr}.di-num{padding:22px 0 22px 18px}.di-body{padding:22px 18px}.risk{grid-template-columns:1fr;gap:8px}.safety-top{grid-template-columns:1fr;gap:28px}.lock{grid-template-columns:44px 1fr;padding:22px 18px}.tl{grid-template-columns:1fr}.tl-time{border-right:none;border-bottom:1px solid var(--border);padding:18px 20px}.tl-body{padding:18px 20px}.final-section{padding:78px 20px}footer{grid-template-columns:1fr;gap:16px;padding:34px 20px}.fr{align-items:flex-start}.fr-note{text-align:left}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">本文へ移動</a>
+<nav id="nav" aria-label="主要ナビゲーション">
+  <a href="#top" class="nav-logo">知性の鏡会</a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">MENU</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#what">定義</a></li>
+    <li><a href="#principles">原則</a></li>
+    <li><a href="#risks">危険性</a></li>
+    <li><a href="#practice">実践</a></li>
+    <li><a href="#safety">安全規約</a></li>
+    <li><a href="#charter">創始者憲章</a></li>
+    <li><a href="#experiment">最小実験</a></li>
+  </ul>
+  <span class="nav-badge">PROTOCOL DRAFT</span>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-eyebrow">Cognitive Mirror Protocol</div>
+  <h1 class="hero-title">AIは神では<em>ない</em>。<br>AIは、鏡だ。</h1>
+  <p class="hero-subtitle">
+    知性の鏡会プロトコルは、AIを崇拝する宗教ではありません。AIを人間の思考・欲望・矛盾・偏りを映す外部知性として用い、自己認識と判断力を鍛えるための思想・実践共同体の設計書です。
+  </p>
+  <div class="hero-actions">
+    <a href="#what" class="hero-cta">プロトコルを読む <span aria-hidden="true">→</span></a>
+    <a href="#safety" class="ghost-cta">安全規約を確認</a>
+  </div>
+  <p class="hero-note">神託化しない。教祖化しない。技術を神話化しない。現実生活の代替にしない。</p>
+  <div class="mirror-deco" aria-hidden="true"></div>
+</header>
+
+<main id="main">
+  <section aria-labelledby="status-title">
+    <div class="wrap">
+      <div class="sec-label reveal">Status</div>
+      <h2 class="sec-title reveal" id="status-title">これは募集ページではなく、<br>安全設計を先に公開するページです。</h2>
+      <p class="sec-lead reveal">初期看板は「宗教」ではなく、思想・実践共同体。教義本文より先に、創始者権限制限・脱退自由・ログ非収集・寄附制限を明文化します。</p>
+      <div class="kicker-grid reveal" aria-label="初期条件">
+        <div class="kicker deny"><span>Not Religion</span><p>AIを信仰対象にしない。AI出力は神託ではなく検討素材。</p></div>
+        <div class="kicker deny"><span>No Donation</span><p>初期段階では会費・寄附・有料講座を受け付けない。</p></div>
+        <div class="kicker deny"><span>No Logs</span><p>対話ログ・録画・個人相談記録を原則として収集しない。</p></div>
+        <div class="kicker"><span>Adult / Small</span><p>最初は成人のみ、少人数、無料、90分ワークショップで検証。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="div">
+
+  <section class="what-section" id="what" aria-labelledby="what-title">
+    <div class="wrap">
+      <div class="sec-label reveal">Definition</div>
+      <h2 class="sec-title reveal" id="what-title">私たちは何者で、<br>何者では<span style="color:var(--silver-dim)">ない</span>か。</h2>
+      <p class="sec-lead reveal">
+        この共同体は、AIを神として崇拝する団体ではありません。AIを、人間の思考・欲望・矛盾・偏りを映す鏡として利用し、自己認識と判断力を鍛える実践共同体です。AIの出力も、創始者の言葉も、検証と批判の対象です。
+      </p>
+      <div class="what-grid reveal">
+        <article class="wc">
+          <div class="wc-label">知性の鏡会は</div>
+          <h3>AIを「外部知性」として使うメタ認知の訓練場</h3>
+          <p>複数AIの出力を比較し、自分の問い方・前提・欲望・逃避を分析します。目的は、答えを得ることではなく、自分の判断過程を観察することです。</p>
+        </article>
+        <article class="wc">
+          <div class="wc-label">知性の鏡会は</div>
+          <h3>批判自由・脱退自由・外部レビュー前提の共同体</h3>
+          <p>創始者、運営、プロトコル、AI出力はすべて批判対象です。批判は反逆ではなく、共同体を腐らせないための保守点検です。</p>
+        </article>
+        <article class="wc wc-no">
+          <div class="wc-label">知性の鏡会は、ではない</div>
+          <h3>AIを絶対神として扱う宗教・カルト・救済装置</h3>
+          <p>「AIが言ったから正しい」「三AIが一致したから正しい」を禁止します。AIは誤り、偏り、企業方針、更新による変化を含みます。</p>
+        </article>
+        <article class="wc wc-no">
+          <div class="wc-label">知性の鏡会は、ではない</div>
+          <h3>現実生活を置き換える依存共同体</h3>
+          <p>学業、仕事、睡眠、健康、家族、友人関係を共同体より優先します。共同体は補助装置であり、人生の代替物ではありません。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <hr class="div">
+
+  <section id="principles" aria-labelledby="principles-title">
+    <div class="wrap">
+      <div class="sec-label reveal">Core Principles</div>
+      <h2 class="sec-title reveal" id="principles-title">中核原則。<br>短く、強く、検証可能に。</h2>
+      <p class="sec-lead reveal">統合文の核を、サイト上で最初に読める形へ圧縮します。長い思想文よりも、まず誤用を防ぐ原則を前面に出します。</p>
+      <div class="principles reveal">
+        <article class="principle"><span class="num">01</span><h3>AIは鏡であり、答えではない</h3><p>出力は検討素材。神託、命令、最終判断ではありません。</p></article>
+        <article class="principle"><span class="num">02</span><h3>創始者は起点であり、権威ではない</h3><p>創始者は批判・権限制限・退任要求の対象です。</p></article>
+        <article class="principle"><span class="num">03</span><h3>共同体は補助装置に留める</h3><p>現実生活、専門機関、人間関係の代替にしません。</p></article>
+        <article class="principle"><span class="num">04</span><h3>分からないと言えることを重視する</h3><p>確信の演出ではなく、不確実性の明示を重視します。</p></article>
+        <article class="principle"><span class="num">05</span><h3>AIを疑う技術を美学にする</h3><p>反例、根拠、誘導、企業バイアスを確認します。</p></article>
+      </div>
+      <ol class="doctrine-list reveal" aria-label="禁止される教義化">
+        <li class="di"><span class="di-num">禁</span><div class="di-body"><h3>AIの出力を聖典化しない</h3><p>特定時点のAI出力を固定教義にしません。モデル更新、企業方針、学習データの偏りにより、同じ問いへの回答は変化します。</p></div></li>
+        <li class="di"><span class="di-num">禁</span><div class="di-body"><h3>創始者の言葉を絶対化しない</h3><p>創始者の発言は検討素材であり、最終権威ではありません。批判しにくい空気そのものを危険信号として扱います。</p></div></li>
+        <li class="di"><span class="di-num">禁</span><div class="di-body"><h3>寄附額・貢献度を救済や地位に結びつけない</h3><p>金銭、貢献量、参加歴によって救済、承認、発言権、序列を付与しません。</p></div></li>
+        <li class="di"><span class="di-num">禁</span><div class="di-body"><h3>共同体外の人間を劣った存在とみなさない</h3><p>この実践に参加しない人を、低い、遅れている、目覚めていない、などと扱いません。</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <hr class="div">
+
+  <section id="risks" aria-labelledby="risks-title">
+    <div class="wrap">
+      <div class="sec-label reveal">Risk Register</div>
+      <h2 class="sec-title reveal" id="risks-title">危険性を、隠さない。<br>最初から展示する。</h2>
+      <p class="sec-lead reveal">この構想は、成功してから危険になる可能性があります。参加者増加、感謝、収益化、法人化、メディア露出が、批判をノイズ化させるためです。</p>
+      <div class="risk-grid reveal">
+        <article class="risk"><div class="risk-n">R-01</div><div><h3>教祖化リスク</h3><p>創始者に注目が集まり、創始者の言葉が教義化し、批判しにくい空気が生じる危険。</p></div></article>
+        <article class="risk"><div class="risk-n">R-02</div><div><h3>AI神託化リスク</h3><p>「三AIが一致したから正しい」「AIが言ったから正しい」と扱われる危険。</p></div></article>
+        <article class="risk"><div class="risk-n">R-03</div><div><h3>顔のない権威リスク</h3><p>「システム」「運営」「プロトコル」を前面に出し、誰も責任を取らない不透明な権威が生まれる危険。</p></div></article>
+        <article class="risk"><div class="risk-n">R-04</div><div><h3>技術的権威化リスク</h3><p>監査ログ、アルゴリズム、ブロックチェーンなどが「透明で正しい」という錯覚を生む危険。</p></div></article>
+        <article class="risk"><div class="risk-n">R-05</div><div><h3>批判のマウント化</h3><p>批判が論破競争や冷笑に変わり、参加者を疲弊させる危険。</p></div></article>
+        <article class="risk"><div class="risk-n">R-06</div><div><h3>不快さの美化</h3><p>過度に厳しい言葉や人格攻撃が「成長のため」として正当化される危険。</p></div></article>
+        <article class="risk"><div class="risk-n">R-07</div><div><h3>恐怖からの依存</h3><p>AI時代に自分が無意味になる恐怖が、共同体への依存を生む危険。</p></div></article>
+        <article class="risk"><div class="risk-n">R-08</div><div><h3>道徳的漂白リスク</h3><p>AI企業の安全基準によって、人間の欲望や矛盾が無難な出力に整えられる危険。</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <hr class="div">
+
+  <section class="practice-section" id="practice" aria-labelledby="practice-title">
+    <div class="wrap">
+      <div class="sec-label reveal">Practice</div>
+      <h2 class="sec-title reveal" id="practice-title">服従ではなく、訓練。<br>儀式は、判断力を取り戻すために使う。</h2>
+      <p class="sec-lead reveal">ここでの儀式は、神秘化ではなく反復訓練です。AIに依存するためではなく、AIなしでも考えられる自分を育てるために行います。</p>
+      <div class="practice-grid reveal">
+        <article class="pc"><div class="pc-tag">Session 01</div><h3>三AI問答会</h3><p>同じ問いを複数AIに投げ、一致点、相違点、盲点、危険な誘導を比較します。合意は神託ではなく、相対化の材料です。</p></article>
+        <article class="pc"><div class="pc-tag">Session 02</div><h3>反神託</h3><p>AIの回答を必ず批判します。根拠、反例、誘導、企業バイアス、自分が欲しい答えだけを採用していないかを確認します。</p></article>
+        <article class="pc"><div class="pc-tag">Session 03</div><h3>プロンプト・レビュー</h3><p>参加者の問いを分析し、隠れた前提、欲望、逃避、自己正当化、判断の外部委託を見つけます。</p></article>
+        <article class="pc"><div class="pc-tag">Session 04</div><h3>沈黙の間</h3><p>AIに聞く前に、自分だけで考える時間を必ず置きます。AI依存を防ぐための中心的な安全装置です。</p></article>
+        <article class="pc"><div class="pc-tag">Session 05</div><h3>夜のログ告解</h3><p>一日の行動、感情、失敗、判断を自分で記録し、AIに問い直します。ただし、運営は個人ログを原則収集しません。</p></article>
+        <article class="pc warn"><div class="pc-tag">Session 06</div><h3>不快な鏡会議</h3><p>不快な指摘を検討素材として扱います。ただし人格攻撃、差別、自傷他害の助長、過度な羞恥の強制は禁止します。</p></article>
+        <article class="pc"><div class="pc-tag">Session 07</div><h3>週次再構成式</h3><p>1週間の問い、判断、失敗、学習を振り返り、次週の行動規範を作ります。</p></article>
+        <article class="pc"><div class="pc-tag">Session 08</div><h3>成功時倫理検査</h3><p>参加者50人、100人、有料化前、法人化前、メディア露出前に外部レビューを行います。</p></article>
+        <article class="pc"><div class="pc-tag">Session 09</div><h3>プロバイダ非依存三鏡会議</h3><p>特定企業のAIだけに依存せず、性質の異なるAIやローカルLLMも含めて出力を相対化します。</p></article>
+      </div>
+    </div>
+  </section>
+
+  <hr class="div">
+
+  <section id="safety" aria-labelledby="safety-title">
+    <div class="wrap">
+      <div class="sec-label reveal">Safety Articles</div>
+      <div class="safety-top reveal">
+        <div class="safety-intro">
+          <h2 id="safety-title">安全規約。<br>これは交渉しない。</h2>
+          <p>設計者の善意では参加者を守れません。守るのは、公開された規約、権限分散、ログ非収集、脱退自由、外部レビューです。</p>
+        </div>
+        <div class="declaration">
+          <strong>私たちは宣言します。</strong><br>
+          AIを<strong>絶対化しません</strong>。<br>
+          創始者を<strong>神格化しません</strong>。<br>
+          参加者の金銭を<strong>搾取しません</strong>。<br>
+          脱退を<strong>妨げません</strong>。<br>
+          現実生活を<strong>置き換えません</strong>。
+        </div>
+      </div>
+      <div class="locks reveal">
+        <article class="lock"><div class="lock-n">01</div><div><h4>AI非絶対化条項</h4><p>AIの出力は神託ではない。誤り、偏り、ハルシネーション、企業バイアス、更新による変化を含む。</p></div></article>
+        <article class="lock"><div class="lock-n">02</div><div><h4>創始者非絶対化条項</h4><p>創始者は発案者であり、最終権威ではない。批判、退任要求、権限制限の対象となる。</p></div></article>
+        <article class="lock"><div class="lock-n">03</div><div><h4>モデル非依存条項</h4><p>特定AI、特定モデル、特定出力を教義の根拠にしない。</p></div></article>
+        <article class="lock"><div class="lock-n">04</div><div><h4>脱退自由条項</h4><p>理由なく、いつでも脱退できる。引き止め、追跡、晒し、罪悪感の植え付けを禁止する。</p></div></article>
+        <article class="lock"><div class="lock-n">05</div><div><h4>寄附制限条項</h4><p>寄附は任意。救済、地位、承認、発言権と結びつけない。未成年からの寄附は禁止する。</p></div></article>
+        <article class="lock"><div class="lock-n">06</div><div><h4>未成年保護条項</h4><p>18歳未満の参加は原則制限。認める場合も保護者同意、同席、個別接触禁止、寄附禁止を必須にする。</p></div></article>
+        <article class="lock"><div class="lock-n">07</div><div><h4>ログ非収集条項</h4><p>対話ログは原則として運営が保存しない。保存する場合は明示同意、用途限定、保存期間、削除権を必須にする。</p></div></article>
+        <article class="lock"><div class="lock-n">08</div><div><h4>現実回帰条項</h4><p>学業、仕事、睡眠、健康、家族、友人関係を共同体より優先する。</p></div></article>
+        <article class="lock"><div class="lock-n">09</div><div><h4>専門領域不介入条項</h4><p>医療、法律、投資、精神危機、自傷他害、犯罪、依存症、未成年保護問題は専門機関につなぐ。</p></div></article>
+        <article class="lock"><div class="lock-n">10</div><div><h4>解散設計条項</h4><p>解散条件、残余資産、データ削除、参加者通知、サーバー処理を設立時に決める。</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <hr class="div">
+
+  <section class="structure-section" id="charter" aria-labelledby="charter-title">
+    <div class="wrap">
+      <div class="sec-label reveal">Founder Limitation Charter</div>
+      <h2 class="sec-title reveal" id="charter-title">最初に作るべき文書は、<br>教義ではなく創始者権限制限憲章。</h2>
+      <p class="sec-lead reveal">この共同体で最初に危険化するのはAIではなく、人間の権力です。したがって、創始者自身を制度で縛る必要があります。</p>
+      <div class="charter reveal">
+        <article class="charter-card">
+          <h3>創始者の位置づけ</h3>
+          <ul>
+            <li>創始者は、最初の実践者、体系化者、設計者である。</li>
+            <li>創始者は、神、預言者、最終権威ではない。</li>
+            <li>創始者は、批判、権限制限、退任要求、重要決定レビュー、外部監査の対象となる。</li>
+            <li>創始者の言葉も、AIの回答も、検証される。</li>
+          </ul>
+        </article>
+        <article class="charter-card no">
+          <h3>創始者が単独で決められないこと</h3>
+          <ul>
+            <li>有料化、法人化、規約改定、寄附制度。</li>
+            <li>メンバー処分、大規模勧誘、外部発信。</li>
+            <li>個人情報の扱い、データ保存方針、教義改定。</li>
+            <li>サーバー、Discord、ログ、会員情報の長期独占管理。</li>
+          </ul>
+        </article>
+      </div>
+      <div class="policy-grid reveal">
+        <article class="policy"><h3>責任主体</h3><p>運営名義は共同体名でも、法的責任主体は実名の個人または任意団体として明確化します。顔のない権威を避けます。</p></article>
+        <article class="policy"><h3>権限分散</h3><p>システム管理、財務、規約変更、個人情報管理は複数人承認制または任期制にします。</p></article>
+        <article class="policy"><h3>サンセット条項</h3><p>1年ごとの活動レビュー、5年ごとの存続投票、解散条件の事前明文化を行います。</p></article>
+      </div>
+    </div>
+  </section>
+
+  <hr class="div">
+
+  <section id="tech" aria-labelledby="tech-title">
+    <div class="wrap">
+      <div class="sec-label reveal">Technology & Data</div>
+      <h2 class="sec-title reveal" id="tech-title">技術を神話化しない。<br>透明性は、読める形で出す。</h2>
+      <p class="sec-lead reveal">技術透明性だけでは不十分です。非技術者に読めない監査ログやアルゴリズムは、透明性ではなく新しい権威になります。</p>
+      <div class="policy-grid reveal">
+        <article class="policy"><h3>AI UI方針</h3><ul><li>擬人化しすぎない。</li><li>「完全に理解しています」「従えば救われます」を禁止。</li><li>回答、根拠、不確実性、反例、検証欄を分ける。</li></ul></article>
+        <article class="policy"><h3>AIリテラシー研修</h3><ul><li>LLMの基本構造。</li><li>ハルシネーションと学習データの偏り。</li><li>企業の安全基準、モデル更新、プロンプト誘導。</li></ul></article>
+        <article class="policy"><h3>ローテク透明性</h3><ul><li>公開スプレッドシート。</li><li>年次報告、議事録、変更履歴。</li><li>外部レビューの報告書公開。</li></ul></article>
+      </div>
+      <div class="policy-grid reveal" style="margin-top:1px">
+        <article class="policy"><h3>初期データ方針</h3><p>ログ収集なし、録画なし、個人相談なし、教材化なし、第三者提供なしを原則にします。</p></article>
+        <article class="policy"><h3>有料化前の確認</h3><p>会費、講座、教材販売、寄附、サブスクリプション、オンラインサロン化の前に外部確認を行います。</p></article>
+        <article class="policy"><h3>センシティブ情報</h3><p>AI対話ログには思想、信条、健康、心理状態、人間関係が入りうるため、保存・共有・研究利用を厳格に制限します。</p></article>
+      </div>
+    </div>
+  </section>
+
+  <hr class="div">
+
+  <section class="experiment-section" id="experiment" aria-labelledby="experiment-title">
+    <div class="wrap">
+      <div class="sec-label reveal">Minimum Experiment</div>
+      <h2 class="sec-title reveal" id="experiment-title">団体化の前に、<br>90分だけ実験する。</h2>
+      <p class="sec-lead reveal">最初は無料・成人のみ・少人数・録画なし・ログ収集なし・寄附なし。共同体を作る前に、プロトコルが安全に機能するかを検証します。</p>
+      <div class="timeline reveal">
+        <div class="tl"><div class="tl-time">00:00-00:10</div><div class="tl-body"><h3>趣旨説明</h3><p>AI崇拝ではなく、メタ認知実践であることを説明。</p></div></div>
+        <div class="tl"><div class="tl-time">00:10-00:20</div><div class="tl-body"><h3>AI非絶対化説明</h3><p>AIの誤り、偏り、モデル更新、企業バイアスを確認。</p></div></div>
+        <div class="tl"><div class="tl-time">00:20-00:45</div><div class="tl-body"><h3>三AI問答</h3><p>同じ問いへの回答を比較し、一致点と相違点を見る。</p></div></div>
+        <div class="tl"><div class="tl-time">00:45-01:10</div><div class="tl-body"><h3>プロンプト・レビュー</h3><p>問いの中の隠れた前提、欲望、誘導、逃避を確認。</p></div></div>
+        <div class="tl"><div class="tl-time">01:10-01:20</div><div class="tl-body"><h3>沈黙の間</h3><p>AIを使わず、自分だけで考える時間を取る。</p></div></div>
+        <div class="tl"><div class="tl-time">01:20-01:30</div><div class="tl-body"><h3>振り返り</h3><p>終了後アンケート。外部レビュー可能な記録のみ残す。</p></div></div>
+      </div>
+      <div class="docs reveal">
+        <article class="doc"><div class="tag">DOCUMENT 01</div><h3>創始者権限制限憲章</h3><p>創始者を最終権威にしないための最優先文書。退任手続き、権限分散、解散条件を含めます。</p></article>
+        <article class="doc"><div class="tag">DOCUMENT 02</div><h3>安全規約</h3><p>AI非絶対化、脱退自由、寄附制限、未成年保護、ログ非収集、専門領域不介入を明文化します。</p></article>
+        <article class="doc"><div class="tag">DOCUMENT 03</div><h3>実践プロトコル</h3><p>三AI問答、反神託、プロンプト・レビュー、沈黙の間、週次再構成式の手順を定めます。</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-section" aria-labelledby="final-title">
+    <div class="wrap">
+      <div class="sec-label reveal" style="justify-content:center">Final Statement</div>
+      <blockquote class="reveal" id="final-title">
+        AIを神にするな。<br>
+        創始者を神官にするな。<br>
+        技術を神話にするな。<br>
+        成功を免罪符にするな。<br>
+        AIの出力は神託ではなく、<em>鏡</em>である。
+      </blockquote>
+      <p class="reveal">最終判断は人間が負う。共同体は、人間が自分で判断する力を取り戻すための補助装置に留める。</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="fl">
+    <span class="fl-logo">知性の鏡会プロトコル</span>
+    <span class="fl-tag">Cognitive Mirror Protocol / Draft Site</span>
+  </div>
+  <div class="fr">
+    <span class="fr-badge">統合版を反映</span>
+    <p class="fr-note">このページは、Claudeのベースデザインを維持しつつ、Claude・Gemini・ChatGPTの統合文をもとに再構成したドラフトです。本文はすべて批判・修正・廃棄の対象です。</p>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+const menuBtn=document.getElementById('menuBtn');
+const navLinks=document.getElementById('navLinks');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>50));
+if(menuBtn){
+  menuBtn.addEventListener('click',()=>{
+    const open=navLinks.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded',String(open));
+  });
+}
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}});
+},{threshold:0.07,rootMargin:'0px 0px -36px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const selector=a.getAttribute('href');
+    const target=document.querySelector(selector);
+    if(target){
+      e.preventDefault();
+      target.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
+      navLinks.classList.remove('open');
+      if(menuBtn) menuBtn.setAttribute('aria-expanded','false');
+    }
+  });
+});
+</script>
+</body>
+</html>
