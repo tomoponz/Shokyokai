@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>会員登録・ログイン — 知性の鏡会プロトコル</title>
+<meta name="description" content="ブラウザ内だけで動くデモ会員登録・ログイン機能です。実運用には認証基盤が必要です。">
+<meta name="theme-color" content="#080808">
+<link rel="canonical" href="https://tomoponz.github.io/Shokyokai/join.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:title" content="会員登録・ログイン — 知性の鏡会プロトコル">
+<meta property="og:description" content="ブラウザ内だけで動くデモ会員登録・ログイン機能です。実運用には認証基盤が必要です。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tomoponz.github.io/Shokyokai/join.html">
+<meta property="og:image" content="https://tomoponz.github.io/Shokyokai/assets/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/css/feature.css">
+
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="index.html">知性の鏡会</a>
+    <nav class="nav-mini" aria-label="機能ナビゲーション">
+      <a href="service.html">機能一覧</a><a href="join.html">登録/ログイン</a><a href="account.html">データ</a><a href="index.html#features">トップへ</a>
+    </nav>
+  </header>
+  <main>
+    <div class="eyebrow">Member Prototype</div>
+    <h1>会員登録・ログイン</h1>
+    <p class="lead">ブラウザ内だけで動くデモ会員登録・ログイン機能です。実運用には認証基盤が必要です。</p>
+    <div class="note warn"><strong>静的プロトタイプ。</strong> GitHub Pagesだけでは、実際の問い合わせ送信、会員認証、決済、AI API接続、サーバー保存はできません。この更新ではUIとローカル保存の動作確認までを入れています。</div>
+
+<div class="auth-bar"><div data-auth-state>未ログイン</div><button type="button" data-logout>ログアウト</button></div>
+<div class="grid">
+  <section class="card"><div class="tag">Register</div><h2>会員登録</h2><form class="form" id="registerForm"><div class="field"><label for="rname">表示名</label><input id="rname" name="name" required></div><div class="field"><label for="remail">メール</label><input id="remail" name="email" type="email" required></div><div class="field"><label for="rrole">目的</label><select id="rrole" name="role"><option value="member">参加検討</option><option value="reviewer">レビュー協力</option><option value="facilitator">運営協力</option></select></div><div class="field"><label for="rpass">パスワード</label><input id="rpass" name="password" type="password" minlength="8" required><p class="hint">デモ用です。普段使っているパスワードは使わないでください。</p></div><button type="submit">デモ登録</button></form><div id="registerStatus" class="status"></div></section>
+  <section class="card"><div class="tag">Login</div><h2>ログイン</h2><form class="form" id="loginForm"><div class="field"><label for="lemail">メール</label><input id="lemail" name="email" type="email" required></div><div class="field"><label for="lpass">パスワード</label><input id="lpass" name="password" type="password" required></div><button type="submit">ログイン</button></form><div id="loginStatus" class="status"></div><div class="links"><a href="account.html">アカウント管理へ</a><a href="data-vault.html">データ保存へ</a></div></section>
+</div>
+<div class="note">この認証はサーバー認証ではありません。ページ閲覧制限、本人確認、権限管理、パスワード再設定はできません。</div>
+
+  </main>
+  <div class="meta">Feature prototype / Last updated: 2026-05-14 / Cognitive Mirror Protocol</div>
+</div>
+<script src="assets/js/config.example.js"></script>
+<script src="assets/js/feature-store.js"></script>
+</body>
+</html>

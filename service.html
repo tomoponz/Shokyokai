@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>機能ポータル — 知性の鏡会プロトコル</title>
+<meta name="description" content="問い合わせ、会員登録、ログイン、申込、データ保存、AIチャット、寄附ボタンを静的プロトタイプとしてまとめた入口ページです。">
+<meta name="theme-color" content="#080808">
+<link rel="canonical" href="https://tomoponz.github.io/Shokyokai/service.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:title" content="機能ポータル — 知性の鏡会プロトコル">
+<meta property="og:description" content="問い合わせ、会員登録、ログイン、申込、データ保存、AIチャット、寄附ボタンを静的プロトタイプとしてまとめた入口ページです。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tomoponz.github.io/Shokyokai/service.html">
+<meta property="og:image" content="https://tomoponz.github.io/Shokyokai/assets/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/css/feature.css">
+
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="index.html">知性の鏡会</a>
+    <nav class="nav-mini" aria-label="機能ナビゲーション">
+      <a href="service.html">機能一覧</a><a href="join.html">登録/ログイン</a><a href="account.html">データ</a><a href="index.html#features">トップへ</a>
+    </nav>
+  </header>
+  <main>
+    <div class="eyebrow">Feature Portal</div>
+    <h1>機能ポータル</h1>
+    <p class="lead">問い合わせ、会員登録、ログイン、申込、データ保存、AIチャット、寄附ボタンを静的プロトタイプとしてまとめた入口ページです。</p>
+    <div class="note warn"><strong>静的プロトタイプ。</strong> GitHub Pagesだけでは、実際の問い合わせ送信、会員認証、決済、AI API接続、サーバー保存はできません。この更新ではUIとローカル保存の動作確認までを入れています。</div>
+
+<div class="grid four">
+  <a class="card portal-card" href="contact-form.html"><div class="tag">Contact Form</div><h2>問い合わせフォーム</h2><p>問い合わせ、批判、削除依頼、表示崩れ報告を分類して保存するフォーム。</p><span class="pill">localStorage</span></a>
+  <a class="card portal-card" href="join.html"><div class="tag">Member</div><h2>会員登録・ログイン</h2><p>ブラウザ内だけで動くデモ会員登録とログイン画面。</p><span class="pill">demo auth</span></a>
+  <a class="card portal-card" href="workshop-apply.html"><div class="tag">Workshop</div><h2>申込フォーム</h2><p>90分ワークショップの申込内容を保存・確認するページ。</p><span class="pill">application</span></a>
+  <a class="card portal-card" href="data-vault.html"><div class="tag">Data Vault</div><h2>データ保存機能</h2><p>判断ログ、プロンプトレビュー、AI利用メモを保存・エクスポートするページ。</p><span class="pill">export JSON</span></a>
+  <a class="card portal-card" href="ai-chat.html"><div class="tag">AI Chat</div><h2>AIチャット埋め込み</h2><p>実AI接続前のチャットUI。バックエンド接続口を前提にした設計。</p><span class="pill">proxy required</span></a>
+  <a class="card portal-card" href="donate.html"><div class="tag">Donation</div><h2>寄附ボタン</h2><p>実決済未接続の寄附意向フォーム。決済URL設定後に外部決済へ接続。</p><span class="pill">payment URL</span></a>
+  <a class="card portal-card" href="account.html"><div class="tag">Account</div><h2>アカウント管理</h2><p>ログイン状態、保存データ、エクスポート、全削除を扱う管理ページ。</p><span class="pill">browser only</span></a>
+  <a class="card portal-card" href="assets/js/config.example.js"><div class="tag">Config</div><h2>接続設定テンプレート</h2><p>メール、AIプロキシ、決済URLなどの設定例。秘密鍵は入れない。</p><span class="pill">template</span></a>
+</div>
+<div class="grid">
+  <section class="card"><div class="tag">Static Limit</div><h2>GitHub Pagesでできること</h2><ul class="mini-list"><li>画面表示</li><li>フォーム入力</li><li>このブラウザへの保存</li><li>JSONエクスポート</li><li>外部URLへの遷移</li></ul></section>
+  <section class="card"><div class="tag">Backend Required</div><h2>本番運用に必要なもの</h2><ul class="mini-list"><li>サーバー側フォーム受信</li><li>安全な認証基盤</li><li>データベース</li><li>AI APIプロキシ</li><li>決済サービス</li><li>管理画面と監査ログ</li></ul></section>
+</div>
+
+  </main>
+  <div class="meta">Feature prototype / Last updated: 2026-05-14 / Cognitive Mirror Protocol</div>
+</div>
+<script src="assets/js/config.example.js"></script>
+<script src="assets/js/feature-store.js"></script>
+</body>
+</html>

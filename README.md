@@ -36,3 +36,24 @@ AIを神託化せず、人間の思考・欲望・矛盾・偏りを映す「鏡
 - 名称・ロゴ：別管理
 
 詳細は `license.html` を参照してください。
+
+
+## 機能プロトタイプ更新
+
+以下のページを追加しました。
+
+- `service.html`：機能ポータル
+- `contact-form.html`：問い合わせフォーム
+- `join.html`：会員登録・ログインのデモ
+- `account.html`：保存データの確認・エクスポート・削除
+- `workshop-apply.html`：ワークショップ申込フォーム
+- `data-vault.html`：判断ログ・プロンプトレビュー保存
+- `ai-chat.html`：AIチャット埋め込みUI
+- `donate.html`：寄附ボタン・寄附意向フォーム
+- `assets/css/feature.css`：機能ページ用CSS
+- `assets/js/feature-store.js`：localStorageベースのデモ動作
+- `assets/js/config.example.js`：本番接続用の設定テンプレート
+
+### 注意
+
+GitHub Pagesだけでは、実際の会員認証、フォーム送信、決済、AI API接続、サーバー保存はできません。今回の追加は、画面設計・入力設計・ローカル保存・JSONエクスポートのための静的プロトタイプです。

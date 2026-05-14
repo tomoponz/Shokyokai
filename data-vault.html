@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>データ保存機能 — 知性の鏡会プロトコル</title>
+<meta name="description" content="判断ログ、プロンプトレビュー、AI出力検証をこのブラウザに保存し、JSONで書き出すページです。">
+<meta name="theme-color" content="#080808">
+<link rel="canonical" href="https://tomoponz.github.io/Shokyokai/data-vault.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:title" content="データ保存機能 — 知性の鏡会プロトコル">
+<meta property="og:description" content="判断ログ、プロンプトレビュー、AI出力検証をこのブラウザに保存し、JSONで書き出すページです。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tomoponz.github.io/Shokyokai/data-vault.html">
+<meta property="og:image" content="https://tomoponz.github.io/Shokyokai/assets/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/css/feature.css">
+
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="index.html">知性の鏡会</a>
+    <nav class="nav-mini" aria-label="機能ナビゲーション">
+      <a href="service.html">機能一覧</a><a href="join.html">登録/ログイン</a><a href="account.html">データ</a><a href="index.html#features">トップへ</a>
+    </nav>
+  </header>
+  <main>
+    <div class="eyebrow">Data Vault</div>
+    <h1>データ保存機能</h1>
+    <p class="lead">判断ログ、プロンプトレビュー、AI出力検証をこのブラウザに保存し、JSONで書き出すページです。</p>
+    <div class="note warn"><strong>静的プロトタイプ。</strong> GitHub Pagesだけでは、実際の問い合わせ送信、会員認証、決済、AI API接続、サーバー保存はできません。この更新ではUIとローカル保存の動作確認までを入れています。</div>
+
+<div class="auth-bar"><div data-auth-state>未ログイン</div><div class="links"><a href="join.html">登録/ログイン</a><button type="button" data-export>JSONを書き出す</button></div></div>
+<form class="form" id="logForm">
+  <div class="grid">
+    <div class="card"><div class="field"><label for="category">分類</label><select id="category" name="category"><option value="decision">判断ログ</option><option value="prompt-review">プロンプトレビュー</option><option value="ai-output">AI出力検証</option><option value="reflection">振り返り</option></select></div></div>
+    <div class="card"><div class="field"><label for="title">題名</label><input id="title" name="title" required></div></div>
+    <div class="card full"><div class="field"><label for="content">記録内容</label><textarea id="content" name="content" required></textarea></div></div>
+    <div class="card full"><div class="field"><label for="humanDecision">人間側の最終判断</label><textarea id="humanDecision" name="humanDecision" placeholder="AI回答ではなく、自分が保留・採用・棄却した判断を書く"></textarea></div></div>
+  </div>
+  <button type="submit">ログを保存</button>
+</form>
+<div id="logStatus" class="status"></div>
+<h2>保存済みログ</h2><div id="logList"></div>
+
+  </main>
+  <div class="meta">Feature prototype / Last updated: 2026-05-14 / Cognitive Mirror Protocol</div>
+</div>
+<script src="assets/js/config.example.js"></script>
+<script src="assets/js/feature-store.js"></script>
+</body>
+</html>

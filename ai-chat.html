@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIチャット埋め込み — 知性の鏡会プロトコル</title>
+<meta name="description" content="AIチャットUIを静的ページに埋め込むためのプロトタイプです。実AI接続にはサーバー側プロキシが必要です。">
+<meta name="theme-color" content="#080808">
+<link rel="canonical" href="https://tomoponz.github.io/Shokyokai/ai-chat.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:title" content="AIチャット埋め込み — 知性の鏡会プロトコル">
+<meta property="og:description" content="AIチャットUIを静的ページに埋め込むためのプロトタイプです。実AI接続にはサーバー側プロキシが必要です。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tomoponz.github.io/Shokyokai/ai-chat.html">
+<meta property="og:image" content="https://tomoponz.github.io/Shokyokai/assets/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/css/feature.css">
+
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="index.html">知性の鏡会</a>
+    <nav class="nav-mini" aria-label="機能ナビゲーション">
+      <a href="service.html">機能一覧</a><a href="join.html">登録/ログイン</a><a href="account.html">データ</a><a href="index.html#features">トップへ</a>
+    </nav>
+  </header>
+  <main>
+    <div class="eyebrow">AI Chat Prototype</div>
+    <h1>AIチャット埋め込み</h1>
+    <p class="lead">AIチャットUIを静的ページに埋め込むためのプロトタイプです。実AI接続にはサーバー側プロキシが必要です。</p>
+    <div class="note warn"><strong>静的プロトタイプ。</strong> GitHub Pagesだけでは、実際の問い合わせ送信、会員認証、決済、AI API接続、サーバー保存はできません。この更新ではUIとローカル保存の動作確認までを入れています。</div>
+
+<div class="note ok">このページはAIチャットの見た目と記録機能だけを実装しています。OpenAI等のAPIキーをブラウザに直接置く設計にはしないでください。</div>
+<div id="chatBox" class="chat-box" aria-live="polite"></div>
+<form class="form" id="chatForm" style="margin-top:18px">
+  <div class="grid">
+    <div class="card"><div class="field"><label for="model">モード</label><select id="model" name="model"><option value="manual-prototype">静的プロトタイプ</option><option value="chatgpt-proxy">ChatGPT APIプロキシ予定</option><option value="claude-proxy">Claude APIプロキシ予定</option><option value="gemini-proxy">Gemini APIプロキシ予定</option></select></div></div>
+    <div class="card full"><div class="field"><label for="message">メッセージ</label><textarea id="message" name="message" required placeholder="問いを入力してください"></textarea></div></div>
+  </div>
+  <button type="submit">送信</button>
+</form>
+<div class="links"><button type="button" data-export>会話履歴を書き出す</button></div>
+
+  </main>
+  <div class="meta">Feature prototype / Last updated: 2026-05-14 / Cognitive Mirror Protocol</div>
+</div>
+<script src="assets/js/config.example.js"></script>
+<script src="assets/js/feature-store.js"></script>
+</body>
+</html>

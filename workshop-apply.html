@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ワークショップ申込フォーム — 知性の鏡会プロトコル</title>
+<meta name="description" content="ワークショップ参加希望を静的フォームで記録するページです。実受付にはサーバー側の保存先が必要です。">
+<meta name="theme-color" content="#080808">
+<link rel="canonical" href="https://tomoponz.github.io/Shokyokai/workshop-apply.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:title" content="ワークショップ申込フォーム — 知性の鏡会プロトコル">
+<meta property="og:description" content="ワークショップ参加希望を静的フォームで記録するページです。実受付にはサーバー側の保存先が必要です。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tomoponz.github.io/Shokyokai/workshop-apply.html">
+<meta property="og:image" content="https://tomoponz.github.io/Shokyokai/assets/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/css/feature.css">
+
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="index.html">知性の鏡会</a>
+    <nav class="nav-mini" aria-label="機能ナビゲーション">
+      <a href="service.html">機能一覧</a><a href="join.html">登録/ログイン</a><a href="account.html">データ</a><a href="index.html#features">トップへ</a>
+    </nav>
+  </header>
+  <main>
+    <div class="eyebrow">Workshop Application</div>
+    <h1>ワークショップ申込フォーム</h1>
+    <p class="lead">ワークショップ参加希望を静的フォームで記録するページです。実受付にはサーバー側の保存先が必要です。</p>
+    <div class="note warn"><strong>静的プロトタイプ。</strong> GitHub Pagesだけでは、実際の問い合わせ送信、会員認証、決済、AI API接続、サーバー保存はできません。この更新ではUIとローカル保存の動作確認までを入れています。</div>
+
+<form class="form" id="workshopForm">
+  <div class="grid">
+    <div class="card"><div class="field"><label for="name">名前</label><input id="name" name="name" required></div></div>
+    <div class="card"><div class="field"><label for="email">メール</label><input id="email" name="email" type="email" required></div></div>
+    <div class="card"><div class="field"><label for="session">希望枠</label><select id="session" name="session"><option value="90min-test">90分テスト回</option><option value="observer">見学希望</option><option value="reviewer">レビュー協力</option></select></div></div>
+    <div class="card"><div class="field"><label for="experience">AI利用経験</label><select id="experience" name="experience"><option>ほぼない</option><option>時々使う</option><option>頻繁に使う</option><option>開発・研究で使う</option></select></div></div>
+    <div class="card full"><div class="field"><label for="purpose">参加目的</label><textarea id="purpose" name="purpose" required></textarea></div></div>
+  </div>
+  <button type="submit">申込内容を保存</button>
+</form>
+<div id="workshopStatus" class="status"></div>
+<h2>保存済み申込</h2><div id="workshopList"></div>
+
+  </main>
+  <div class="meta">Feature prototype / Last updated: 2026-05-14 / Cognitive Mirror Protocol</div>
+</div>
+<script src="assets/js/config.example.js"></script>
+<script src="assets/js/feature-store.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>寄附ボタン — 知性の鏡会プロトコル</title>
+<meta name="description" content="寄附ボタンと金額選択UIのプロトタイプです。実決済には外部決済サービスと運用ルールが必要です。">
+<meta name="theme-color" content="#080808">
+<link rel="canonical" href="https://tomoponz.github.io/Shokyokai/donate.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:title" content="寄附ボタン — 知性の鏡会プロトコル">
+<meta property="og:description" content="寄附ボタンと金額選択UIのプロトタイプです。実決済には外部決済サービスと運用ルールが必要です。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tomoponz.github.io/Shokyokai/donate.html">
+<meta property="og:image" content="https://tomoponz.github.io/Shokyokai/assets/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/css/feature.css">
+
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="index.html">知性の鏡会</a>
+    <nav class="nav-mini" aria-label="機能ナビゲーション">
+      <a href="service.html">機能一覧</a><a href="join.html">登録/ログイン</a><a href="account.html">データ</a><a href="index.html#features">トップへ</a>
+    </nav>
+  </header>
+  <main>
+    <div class="eyebrow">Donation Prototype</div>
+    <h1>寄附ボタン</h1>
+    <p class="lead">寄附ボタンと金額選択UIのプロトタイプです。実決済には外部決済サービスと運用ルールが必要です。</p>
+    <div class="note warn"><strong>静的プロトタイプ。</strong> GitHub Pagesだけでは、実際の問い合わせ送信、会員認証、決済、AI API接続、サーバー保存はできません。この更新ではUIとローカル保存の動作確認までを入れています。</div>
+
+<div class="note warn">実決済は未接続です。決済サービスのURLを設定するまでは、金銭の移動は発生しません。</div>
+<form class="form" id="donationForm">
+  <div class="grid">
+    <div class="card full"><div class="tag">Amount</div><h2>寄附金額</h2><div class="amount-grid"><button type="button" class="amount-option" data-amount="500">500円</button><button type="button" class="amount-option" data-amount="1000">1,000円</button><button type="button" class="amount-option" data-amount="3000">3,000円</button><button type="button" class="amount-option" data-amount="5000">5,000円</button></div><div class="field" style="margin-top:14px"><label for="amount">任意金額</label><input id="amount" name="amount" type="number" min="1" step="1" required></div></div>
+    <div class="card"><div class="field"><label for="name">名前</label><input id="name" name="name" required></div></div>
+    <div class="card"><div class="field"><label for="email">メール</label><input id="email" name="email" type="email"></div></div>
+    <div class="card full"><div class="field"><label for="purpose">用途</label><select id="purpose" name="purpose"><option value="site">サイト運営</option><option value="review">外部レビュー費用</option><option value="workshop">ワークショップ資料作成</option><option value="unspecified">使途指定なし</option></select></div></div>
+  </div>
+  <button type="submit">寄附意向を保存</button>
+</form>
+<div id="donationStatus" class="status"></div>
+<h2>保存済み寄附意向</h2><div id="donationList"></div>
+
+  </main>
+  <div class="meta">Feature prototype / Last updated: 2026-05-14 / Cognitive Mirror Protocol</div>
+</div>
+<script src="assets/js/config.example.js"></script>
+<script src="assets/js/feature-store.js"></script>
+</body>
+</html>

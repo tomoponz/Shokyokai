@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>問い合わせフォーム — 知性の鏡会プロトコル</title>
+<meta name="description" content="連絡、批判、修正依頼、外部レビュー提案を分類して記録する静的フォームです。">
+<meta name="theme-color" content="#080808">
+<link rel="canonical" href="https://tomoponz.github.io/Shokyokai/contact-form.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:title" content="問い合わせフォーム — 知性の鏡会プロトコル">
+<meta property="og:description" content="連絡、批判、修正依頼、外部レビュー提案を分類して記録する静的フォームです。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tomoponz.github.io/Shokyokai/contact-form.html">
+<meta property="og:image" content="https://tomoponz.github.io/Shokyokai/assets/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/css/feature.css">
+
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="index.html">知性の鏡会</a>
+    <nav class="nav-mini" aria-label="機能ナビゲーション">
+      <a href="service.html">機能一覧</a><a href="join.html">登録/ログイン</a><a href="account.html">データ</a><a href="index.html#features">トップへ</a>
+    </nav>
+  </header>
+  <main>
+    <div class="eyebrow">Contact Form</div>
+    <h1>問い合わせフォーム</h1>
+    <p class="lead">連絡、批判、修正依頼、外部レビュー提案を分類して記録する静的フォームです。</p>
+    <div class="note warn"><strong>静的プロトタイプ。</strong> GitHub Pagesだけでは、実際の問い合わせ送信、会員認証、決済、AI API接続、サーバー保存はできません。この更新ではUIとローカル保存の動作確認までを入れています。</div>
+
+<form class="form" id="contactForm">
+  <div class="grid">
+    <div class="card"><div class="field"><label for="type">問い合わせ種別</label><select id="type" name="type" required><option value="general">一般問い合わせ</option><option value="critique">批判・改善提案</option><option value="bug">表示崩れ・リンク切れ</option><option value="removal">削除・訂正依頼</option><option value="review">外部レビュー提案</option></select></div></div>
+    <div class="card"><div class="field"><label for="name">名前</label><input id="name" name="name" autocomplete="name" required></div></div>
+    <div class="card"><div class="field"><label for="email">メールアドレス</label><input id="email" name="email" type="email" autocomplete="email" required></div></div>
+    <div class="card"><div class="field"><label for="subject">件名</label><input id="subject" name="subject" required></div></div>
+    <div class="card full"><div class="field"><label for="message">内容</label><textarea id="message" name="message" required></textarea><p class="hint">送信ボタンを押すと、このブラウザ内に保存されます。設定済みメールアドレスがある場合はメール作成画面も開きます。</p></div></div>
+  </div>
+  <button type="submit">問い合わせを保存</button>
+</form>
+<div id="contactStatus" class="status" aria-live="polite"></div>
+<h2>保存済み問い合わせ</h2>
+<div id="contactList"></div>
+
+  </main>
+  <div class="meta">Feature prototype / Last updated: 2026-05-14 / Cognitive Mirror Protocol</div>
+</div>
+<script src="assets/js/config.example.js"></script>
+<script src="assets/js/feature-store.js"></script>
+</body>
+</html>
